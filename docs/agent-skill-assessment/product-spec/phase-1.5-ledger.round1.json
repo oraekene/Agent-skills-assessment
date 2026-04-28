@@ -1,0 +1,312 @@
+{
+  "version": "phase1.5-round1",
+  "taxonomy_assignments": [
+    {
+      "assignment_id": "tax-oh-my-codex-agents",
+      "unit_id": "unit-oh-my-codex-agents",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "orchestration-and-workflow",
+      "hybrid_primary_members": [],
+      "secondary_domains": [],
+      "function_modes": ["orchestrate"],
+      "industry_tags": ["software"],
+      "role_tags": ["engineer"],
+      "context_scope_tags": ["team"]
+    },
+    {
+      "assignment_id": "tax-oh-my-codex-deep-interview",
+      "unit_id": "unit-oh-my-codex-deep-interview",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "orchestration-and-workflow",
+      "hybrid_primary_members": [],
+      "secondary_domains": ["product-and-business-strategy"],
+      "function_modes": ["plan", "orchestrate"],
+      "industry_tags": ["software"],
+      "role_tags": ["engineer"],
+      "context_scope_tags": ["team"]
+    },
+    {
+      "assignment_id": "tax-superpowers-brainstorming",
+      "unit_id": "unit-superpowers-brainstorming",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "orchestration-and-workflow",
+      "hybrid_primary_members": ["software-engineering", "orchestration-and-workflow"],
+      "secondary_domains": [],
+      "function_modes": ["plan", "orchestrate"],
+      "industry_tags": ["software"],
+      "role_tags": ["engineer"],
+      "context_scope_tags": ["team"]
+    },
+    {
+      "assignment_id": "tax-superpowers-tdd",
+      "unit_id": "unit-superpowers-tdd",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "software-engineering",
+      "hybrid_primary_members": [],
+      "secondary_domains": [],
+      "function_modes": ["implement", "verify"],
+      "industry_tags": ["software"],
+      "role_tags": ["engineer"],
+      "context_scope_tags": ["team"]
+    },
+    {
+      "assignment_id": "tax-claude-content-writer",
+      "unit_id": "unit-claude-agents-content-writer",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "writing-voice-and-content",
+      "hybrid_primary_members": [],
+      "secondary_domains": [],
+      "function_modes": ["implement"],
+      "industry_tags": [],
+      "role_tags": ["writer"],
+      "context_scope_tags": ["team"]
+    },
+    {
+      "assignment_id": "tax-ralph-prd",
+      "unit_id": "unit-ralph-prd",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "product-and-business-strategy",
+      "hybrid_primary_members": [],
+      "secondary_domains": ["orchestration-and-workflow"],
+      "function_modes": ["plan"],
+      "industry_tags": ["software"],
+      "role_tags": ["founder", "engineer"],
+      "context_scope_tags": ["team"]
+    },
+    {
+      "assignment_id": "tax-matt-tdd",
+      "unit_id": "unit-mattpocock-tdd",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "software-engineering",
+      "hybrid_primary_members": [],
+      "secondary_domains": [],
+      "function_modes": ["implement", "verify"],
+      "industry_tags": ["software"],
+      "role_tags": ["engineer"],
+      "context_scope_tags": ["team"]
+    },
+    {
+      "assignment_id": "tax-marketing-product-context",
+      "unit_id": "unit-marketing-product-context",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "marketing-and-growth",
+      "hybrid_primary_members": [],
+      "secondary_domains": ["writing-voice-and-content"],
+      "function_modes": ["research", "plan"],
+      "industry_tags": ["software"],
+      "role_tags": ["marketer", "founder"],
+      "context_scope_tags": ["team"]
+    },
+    {
+      "assignment_id": "tax-marketing-page-cro",
+      "unit_id": "unit-marketing-page-cro",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "marketing-and-growth",
+      "hybrid_primary_members": [],
+      "secondary_domains": ["data-and-analytics"],
+      "function_modes": ["audit"],
+      "industry_tags": ["software", "ecommerce"],
+      "role_tags": ["marketer"],
+      "context_scope_tags": ["team", "consumer"]
+    },
+    {
+      "assignment_id": "tax-lago-template",
+      "unit_id": "unit-lago-voice-template",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "writing-voice-and-content",
+      "hybrid_primary_members": [],
+      "secondary_domains": [],
+      "function_modes": ["template", "rewrite"],
+      "industry_tags": [],
+      "role_tags": ["founder", "writer"],
+      "context_scope_tags": ["personal", "team"]
+    },
+    {
+      "assignment_id": "tax-taste-main",
+      "unit_id": "unit-taste-main",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "design-and-ux",
+      "hybrid_primary_members": [],
+      "secondary_domains": [],
+      "function_modes": ["implement", "review"],
+      "industry_tags": ["software"],
+      "role_tags": ["designer", "engineer"],
+      "context_scope_tags": ["consumer"]
+    },
+    {
+      "assignment_id": "tax-taste-redesign",
+      "unit_id": "unit-taste-redesign",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "design-and-ux",
+      "hybrid_primary_members": [],
+      "secondary_domains": [],
+      "function_modes": ["audit", "implement"],
+      "industry_tags": ["software"],
+      "role_tags": ["designer", "engineer"],
+      "context_scope_tags": ["consumer"]
+    },
+    {
+      "assignment_id": "tax-impeccable-main",
+      "unit_id": "unit-impeccable-main",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "design-and-ux",
+      "hybrid_primary_members": [],
+      "secondary_domains": [],
+      "function_modes": ["audit", "review", "implement"],
+      "industry_tags": ["software"],
+      "role_tags": ["designer", "engineer"],
+      "context_scope_tags": ["team", "consumer"]
+    },
+    {
+      "assignment_id": "tax-impeccable-agents",
+      "unit_id": "unit-impeccable-agents",
+      "taxonomy_version": "2.1.0",
+      "primary_domain": "meta-skillcraft-and-tooling",
+      "hybrid_primary_members": [],
+      "secondary_domains": ["design-and-ux"],
+      "function_modes": ["package"],
+      "industry_tags": ["software"],
+      "role_tags": ["maintainer"],
+      "context_scope_tags": ["team"]
+    }
+  ],
+  "tag_assignments": [
+    { "tag_assignment_id": "tag-src-oh-my-codex", "subject_type": "source", "subject_id": "src-oh-my-codex", "tag_family": "source", "tag_id": "source:oh-my-codex", "tag_label": "oh-my-codex", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+    { "tag_assignment_id": "tag-src-superpowers", "subject_type": "source", "subject_id": "src-superpowers", "tag_family": "source", "tag_id": "source:superpowers", "tag_label": "superpowers", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+    { "tag_assignment_id": "tag-src-claude-agents", "subject_type": "source", "subject_id": "src-claude-agents", "tag_family": "source", "tag_id": "source:claude-agents", "tag_label": "claude-agents", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+    { "tag_assignment_id": "tag-src-ralph", "subject_type": "source", "subject_id": "src-ralph", "tag_family": "source", "tag_id": "source:ralph", "tag_label": "ralph", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+    { "tag_assignment_id": "tag-src-matt", "subject_type": "source", "subject_id": "src-mattpocock-skills", "tag_family": "source", "tag_id": "source:mattpocock-skills", "tag_label": "mattpocock/skills", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+    { "tag_assignment_id": "tag-src-marketing", "subject_type": "source", "subject_id": "src-marketingskills", "tag_family": "source", "tag_id": "source:marketingskills", "tag_label": "marketingskills", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+    { "tag_assignment_id": "tag-src-lago", "subject_type": "source", "subject_id": "src-inside-lago-voice-skill", "tag_family": "source", "tag_id": "source:inside-lago-voice-skill", "tag_label": "inside-lago-voice-skill", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+    { "tag_assignment_id": "tag-src-taste", "subject_type": "source", "subject_id": "src-taste-skill", "tag_family": "source", "tag_id": "source:taste-skill", "tag_label": "taste-skill", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+    { "tag_assignment_id": "tag-src-impeccable", "subject_type": "source", "subject_id": "src-impeccable", "tag_family": "source", "tag_id": "source:impeccable", "tag_label": "impeccable", "assignment_evidence_type": "E", "assignment_basis": "Source origin and name." },
+
+    { "tag_assignment_id": "tag-unit-ohmy-runtime", "subject_type": "unit", "subject_id": "unit-oh-my-codex-deep-interview", "tag_family": "runtime", "tag_id": "runtime:codex", "tag_label": "Codex", "assignment_evidence_type": "E", "assignment_basis": "Repo explicitly targets Codex." },
+    { "tag_assignment_id": "tag-unit-super-runtime", "subject_type": "unit", "subject_id": "unit-superpowers-brainstorming", "tag_family": "runtime", "tag_id": "runtime:codex", "tag_label": "Codex", "assignment_evidence_type": "E", "assignment_basis": "Repo explicitly targets Codex." },
+    { "tag_assignment_id": "tag-unit-super-tdd-runtime", "subject_type": "unit", "subject_id": "unit-superpowers-tdd", "tag_family": "runtime", "tag_id": "runtime:codex", "tag_label": "Codex", "assignment_evidence_type": "E", "assignment_basis": "Repo explicitly targets Codex." },
+    { "tag_assignment_id": "tag-unit-marketing-runtime", "subject_type": "unit", "subject_id": "unit-marketing-product-context", "tag_family": "runtime", "tag_id": "runtime:codex", "tag_label": "Codex", "assignment_evidence_type": "E", "assignment_basis": "Repo explicitly targets Codex." },
+    { "tag_assignment_id": "tag-unit-impeccable-runtime", "subject_type": "unit", "subject_id": "unit-impeccable-main", "tag_family": "runtime", "tag_id": "runtime:codex", "tag_label": "Codex", "assignment_evidence_type": "E", "assignment_basis": "Repo explicitly targets Codex." },
+
+    { "tag_assignment_id": "tag-unit-ohmy-task", "subject_type": "unit", "subject_id": "unit-oh-my-codex-deep-interview", "tag_family": "task", "tag_id": "task:clarification", "tag_label": "clarification", "assignment_evidence_type": "E", "assignment_basis": "Skill is explicitly for ambiguity reduction." },
+    { "tag_assignment_id": "tag-unit-super-brainstorm-task", "subject_type": "unit", "subject_id": "unit-superpowers-brainstorming", "tag_family": "task", "tag_id": "task:specification", "tag_label": "specification", "assignment_evidence_type": "E", "assignment_basis": "Skill explicitly produces approved design/spec." },
+    { "tag_assignment_id": "tag-unit-super-tdd-task", "subject_type": "unit", "subject_id": "unit-superpowers-tdd", "tag_family": "task", "tag_id": "task:tdd", "tag_label": "TDD", "assignment_evidence_type": "E", "assignment_basis": "Skill explicitly enforces TDD." },
+    { "tag_assignment_id": "tag-unit-claude-task", "subject_type": "unit", "subject_id": "unit-claude-agents-content-writer", "tag_family": "task", "tag_id": "task:content-writing", "tag_label": "content writing", "assignment_evidence_type": "E", "assignment_basis": "Agent explicitly writes content." },
+    { "tag_assignment_id": "tag-unit-ralph-task", "subject_type": "unit", "subject_id": "unit-ralph-prd", "tag_family": "task", "tag_id": "task:prd", "tag_label": "PRD", "assignment_evidence_type": "E", "assignment_basis": "Skill explicitly creates PRDs." },
+    { "tag_assignment_id": "tag-unit-marketing-context-task", "subject_type": "unit", "subject_id": "unit-marketing-product-context", "tag_family": "task", "tag_id": "task:positioning-context", "tag_label": "positioning context", "assignment_evidence_type": "E", "assignment_basis": "Skill explicitly creates shared product marketing context." },
+    { "tag_assignment_id": "tag-unit-marketing-cro-task", "subject_type": "unit", "subject_id": "unit-marketing-page-cro", "tag_family": "task", "tag_id": "task:cro-audit", "tag_label": "CRO audit", "assignment_evidence_type": "E", "assignment_basis": "Skill explicitly audits pages for conversion improvement." },
+    { "tag_assignment_id": "tag-unit-lago-task", "subject_type": "unit", "subject_id": "unit-lago-voice-template", "tag_family": "task", "tag_id": "task:voice-calibration", "tag_label": "voice calibration", "assignment_evidence_type": "E", "assignment_basis": "Template explicitly calibrates voice." },
+    { "tag_assignment_id": "tag-unit-taste-task", "subject_type": "unit", "subject_id": "unit-taste-main", "tag_family": "task", "tag_id": "task:frontend-polish", "tag_label": "frontend polish", "assignment_evidence_type": "E", "assignment_basis": "Skill explicitly drives premium frontend output." },
+    { "tag_assignment_id": "tag-unit-taste-redesign-task", "subject_type": "unit", "subject_id": "unit-taste-redesign", "tag_family": "task", "tag_id": "task:redesign", "tag_label": "redesign", "assignment_evidence_type": "E", "assignment_basis": "Skill explicitly supports redesign work." },
+    { "tag_assignment_id": "tag-unit-impeccable-task", "subject_type": "unit", "subject_id": "unit-impeccable-main", "tag_family": "task", "tag_id": "task:design-audit", "tag_label": "design audit", "assignment_evidence_type": "E", "assignment_basis": "Skill explicitly supports audits, critique, and refinements." }
+  ],
+  "score_records": [
+    { "score_id": "score-ohmy-agents-static", "subject_type": "unit", "subject_id": "unit-oh-my-codex-agents", "score_family": "static-structural", "score_value": 74, "score_band": "70-79", "rubric_version": "v2-round1", "evidence_coverage": 0.78, "unknown_share": 0.05 },
+    { "score_id": "score-ohmy-agents-codexfit", "subject_type": "unit", "subject_id": "unit-oh-my-codex-agents", "score_family": "codex-fit", "score_value": 55, "score_band": "50-69", "rubric_version": "phase1.5", "evidence_coverage": 0.78, "unknown_share": 0.05 },
+    { "score_id": "score-ohmy-agents-bench", "subject_type": "unit", "subject_id": "unit-oh-my-codex-agents", "score_family": "benchmark-readiness", "score_value": 45, "score_band": "20-49", "rubric_version": "phase1.5", "evidence_coverage": 0.78, "unknown_share": 0.05 },
+
+    { "score_id": "score-ohmy-deep-static", "subject_type": "unit", "subject_id": "unit-oh-my-codex-deep-interview", "score_family": "static-structural", "score_value": 85, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.84, "unknown_share": 0.04 },
+    { "score_id": "score-ohmy-deep-codexfit", "subject_type": "unit", "subject_id": "unit-oh-my-codex-deep-interview", "score_family": "codex-fit", "score_value": 62, "score_band": "50-69", "rubric_version": "phase1.5", "evidence_coverage": 0.84, "unknown_share": 0.04 },
+    { "score_id": "score-ohmy-deep-bench", "subject_type": "unit", "subject_id": "unit-oh-my-codex-deep-interview", "score_family": "benchmark-readiness", "score_value": 72, "score_band": "70-79", "rubric_version": "phase1.5", "evidence_coverage": 0.84, "unknown_share": 0.04 },
+
+    { "score_id": "score-super-brain-static", "subject_type": "unit", "subject_id": "unit-superpowers-brainstorming", "score_family": "static-structural", "score_value": 94, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.9, "unknown_share": 0.02 },
+    { "score_id": "score-super-brain-codexfit", "subject_type": "unit", "subject_id": "unit-superpowers-brainstorming", "score_family": "codex-fit", "score_value": 90, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.9, "unknown_share": 0.02 },
+    { "score_id": "score-super-brain-bench", "subject_type": "unit", "subject_id": "unit-superpowers-brainstorming", "score_family": "benchmark-readiness", "score_value": 83, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.9, "unknown_share": 0.02 },
+
+    { "score_id": "score-super-tdd-static", "subject_type": "unit", "subject_id": "unit-superpowers-tdd", "score_family": "static-structural", "score_value": 89, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.88, "unknown_share": 0.03 },
+    { "score_id": "score-super-tdd-codexfit", "subject_type": "unit", "subject_id": "unit-superpowers-tdd", "score_family": "codex-fit", "score_value": 91, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.88, "unknown_share": 0.03 },
+    { "score_id": "score-super-tdd-bench", "subject_type": "unit", "subject_id": "unit-superpowers-tdd", "score_family": "benchmark-readiness", "score_value": 86, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.88, "unknown_share": 0.03 },
+
+    { "score_id": "score-claude-content-static", "subject_type": "unit", "subject_id": "unit-claude-agents-content-writer", "score_family": "static-structural", "score_value": 64, "score_band": "50-69", "rubric_version": "v2-round1", "evidence_coverage": 0.7, "unknown_share": 0.18 },
+    { "score_id": "score-claude-content-codexfit", "subject_type": "unit", "subject_id": "unit-claude-agents-content-writer", "score_family": "codex-fit", "score_value": 35, "score_band": "20-49", "rubric_version": "phase1.5", "evidence_coverage": 0.7, "unknown_share": 0.18 },
+    { "score_id": "score-claude-content-bench", "subject_type": "unit", "subject_id": "unit-claude-agents-content-writer", "score_family": "benchmark-readiness", "score_value": 58, "score_band": "50-69", "rubric_version": "phase1.5", "evidence_coverage": 0.7, "unknown_share": 0.18 },
+
+    { "score_id": "score-ralph-prd-static", "subject_type": "unit", "subject_id": "unit-ralph-prd", "score_family": "static-structural", "score_value": 77, "score_band": "70-79", "rubric_version": "v2-round1", "evidence_coverage": 0.81, "unknown_share": 0.08 },
+    { "score_id": "score-ralph-prd-codexfit", "subject_type": "unit", "subject_id": "unit-ralph-prd", "score_family": "codex-fit", "score_value": 58, "score_band": "50-69", "rubric_version": "phase1.5", "evidence_coverage": 0.81, "unknown_share": 0.08 },
+    { "score_id": "score-ralph-prd-bench", "subject_type": "unit", "subject_id": "unit-ralph-prd", "score_family": "benchmark-readiness", "score_value": 71, "score_band": "70-79", "rubric_version": "phase1.5", "evidence_coverage": 0.81, "unknown_share": 0.08 },
+
+    { "score_id": "score-matt-tdd-static", "subject_type": "unit", "subject_id": "unit-mattpocock-tdd", "score_family": "static-structural", "score_value": 76, "score_band": "70-79", "rubric_version": "v2-round1", "evidence_coverage": 0.8, "unknown_share": 0.07 },
+    { "score_id": "score-matt-tdd-codexfit", "subject_type": "unit", "subject_id": "unit-mattpocock-tdd", "score_family": "codex-fit", "score_value": 78, "score_band": "70-79", "rubric_version": "phase1.5", "evidence_coverage": 0.8, "unknown_share": 0.07 },
+    { "score_id": "score-matt-tdd-bench", "subject_type": "unit", "subject_id": "unit-mattpocock-tdd", "score_family": "benchmark-readiness", "score_value": 74, "score_band": "70-79", "rubric_version": "phase1.5", "evidence_coverage": 0.8, "unknown_share": 0.07 },
+
+    { "score_id": "score-marketing-context-static", "subject_type": "unit", "subject_id": "unit-marketing-product-context", "score_family": "static-structural", "score_value": 92, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.9, "unknown_share": 0.02 },
+    { "score_id": "score-marketing-context-codexfit", "subject_type": "unit", "subject_id": "unit-marketing-product-context", "score_family": "codex-fit", "score_value": 89, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.9, "unknown_share": 0.02 },
+    { "score_id": "score-marketing-context-bench", "subject_type": "unit", "subject_id": "unit-marketing-product-context", "score_family": "benchmark-readiness", "score_value": 82, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.9, "unknown_share": 0.02 },
+
+    { "score_id": "score-marketing-cro-static", "subject_type": "unit", "subject_id": "unit-marketing-page-cro", "score_family": "static-structural", "score_value": 86, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.86, "unknown_share": 0.04 },
+    { "score_id": "score-marketing-cro-codexfit", "subject_type": "unit", "subject_id": "unit-marketing-page-cro", "score_family": "codex-fit", "score_value": 87, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.86, "unknown_share": 0.04 },
+    { "score_id": "score-marketing-cro-bench", "subject_type": "unit", "subject_id": "unit-marketing-page-cro", "score_family": "benchmark-readiness", "score_value": 79, "score_band": "70-79", "rubric_version": "phase1.5", "evidence_coverage": 0.86, "unknown_share": 0.04 },
+
+    { "score_id": "score-lago-template-static", "subject_type": "unit", "subject_id": "unit-lago-voice-template", "score_family": "static-structural", "score_value": 75, "score_band": "70-79", "rubric_version": "v2-round1", "evidence_coverage": 0.77, "unknown_share": 0.09 },
+    { "score_id": "score-lago-template-codexfit", "subject_type": "unit", "subject_id": "unit-lago-voice-template", "score_family": "codex-fit", "score_value": 61, "score_band": "50-69", "rubric_version": "phase1.5", "evidence_coverage": 0.77, "unknown_share": 0.09 },
+    { "score_id": "score-lago-template-bench", "subject_type": "unit", "subject_id": "unit-lago-voice-template", "score_family": "benchmark-readiness", "score_value": 68, "score_band": "50-69", "rubric_version": "phase1.5", "evidence_coverage": 0.77, "unknown_share": 0.09 },
+
+    { "score_id": "score-taste-main-static", "subject_type": "unit", "subject_id": "unit-taste-main", "score_family": "static-structural", "score_value": 87, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.87, "unknown_share": 0.03 },
+    { "score_id": "score-taste-main-codexfit", "subject_type": "unit", "subject_id": "unit-taste-main", "score_family": "codex-fit", "score_value": 88, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.87, "unknown_share": 0.03 },
+    { "score_id": "score-taste-main-bench", "subject_type": "unit", "subject_id": "unit-taste-main", "score_family": "benchmark-readiness", "score_value": 77, "score_band": "70-79", "rubric_version": "phase1.5", "evidence_coverage": 0.87, "unknown_share": 0.03 },
+
+    { "score_id": "score-taste-redesign-static", "subject_type": "unit", "subject_id": "unit-taste-redesign", "score_family": "static-structural", "score_value": 88, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.88, "unknown_share": 0.03 },
+    { "score_id": "score-taste-redesign-codexfit", "subject_type": "unit", "subject_id": "unit-taste-redesign", "score_family": "codex-fit", "score_value": 88, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.88, "unknown_share": 0.03 },
+    { "score_id": "score-taste-redesign-bench", "subject_type": "unit", "subject_id": "unit-taste-redesign", "score_family": "benchmark-readiness", "score_value": 79, "score_band": "70-79", "rubric_version": "phase1.5", "evidence_coverage": 0.88, "unknown_share": 0.03 },
+
+    { "score_id": "score-impeccable-main-static", "subject_type": "unit", "subject_id": "unit-impeccable-main", "score_family": "static-structural", "score_value": 93, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.91, "unknown_share": 0.02 },
+    { "score_id": "score-impeccable-main-codexfit", "subject_type": "unit", "subject_id": "unit-impeccable-main", "score_family": "codex-fit", "score_value": 92, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.91, "unknown_share": 0.02 },
+    { "score_id": "score-impeccable-main-bench", "subject_type": "unit", "subject_id": "unit-impeccable-main", "score_family": "benchmark-readiness", "score_value": 84, "score_band": "80-94", "rubric_version": "phase1.5", "evidence_coverage": 0.91, "unknown_share": 0.02 },
+
+    { "score_id": "score-impeccable-agents-static", "subject_type": "unit", "subject_id": "unit-impeccable-agents", "score_family": "static-structural", "score_value": 80, "score_band": "80-94", "rubric_version": "v2-round1", "evidence_coverage": 0.82, "unknown_share": 0.05 },
+    { "score_id": "score-impeccable-agents-codexfit", "subject_type": "unit", "subject_id": "unit-impeccable-agents", "score_family": "codex-fit", "score_value": 72, "score_band": "70-79", "rubric_version": "phase1.5", "evidence_coverage": 0.82, "unknown_share": 0.05 },
+    { "score_id": "score-impeccable-agents-bench", "subject_type": "unit", "subject_id": "unit-impeccable-agents", "score_family": "benchmark-readiness", "score_value": 52, "score_band": "50-69", "rubric_version": "phase1.5", "evidence_coverage": 0.82, "unknown_share": 0.05 }
+  ],
+  "grouped_results": [
+    {
+      "result_id": "grp-orchestration-static",
+      "domain": "orchestration-and-workflow",
+      "score_family": "static-structural",
+      "bands": [
+        { "band": "80-94", "unit_ids": ["unit-superpowers-brainstorming", "unit-oh-my-codex-deep-interview"] },
+        { "band": "70-79", "unit_ids": ["unit-oh-my-codex-agents"] }
+      ]
+    },
+    {
+      "result_id": "grp-software-static",
+      "domain": "software-engineering",
+      "score_family": "static-structural",
+      "bands": [
+        { "band": "80-94", "unit_ids": ["unit-superpowers-tdd"] },
+        { "band": "70-79", "unit_ids": ["unit-mattpocock-tdd"] }
+      ]
+    },
+    {
+      "result_id": "grp-design-static",
+      "domain": "design-and-ux",
+      "score_family": "static-structural",
+      "bands": [
+        { "band": "80-94", "unit_ids": ["unit-impeccable-main", "unit-taste-redesign", "unit-taste-main"] }
+      ]
+    },
+    {
+      "result_id": "grp-marketing-static",
+      "domain": "marketing-and-growth",
+      "score_family": "static-structural",
+      "bands": [
+        { "band": "80-94", "unit_ids": ["unit-marketing-product-context", "unit-marketing-page-cro"] }
+      ]
+    },
+    {
+      "result_id": "grp-writing-static",
+      "domain": "writing-voice-and-content",
+      "score_family": "static-structural",
+      "bands": [
+        { "band": "70-79", "unit_ids": ["unit-lago-voice-template"] },
+        { "band": "50-69", "unit_ids": ["unit-claude-agents-content-writer"] }
+      ]
+    },
+    {
+      "result_id": "grp-product-static",
+      "domain": "product-and-business-strategy",
+      "score_family": "static-structural",
+      "bands": [
+        { "band": "70-79", "unit_ids": ["unit-ralph-prd"] }
+      ]
+    }
+  ]
+}

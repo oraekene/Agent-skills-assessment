@@ -50,6 +50,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - operational workflow for the first real internal comparison engine
 
+`phase-1.5-unit-ranking.md`
+
+- unit-level taxonomy, tag, score, and grouped-band ranking layer
+
+`phase-1.5-results.md`
+
+- summary of the first skill-unit ranking outputs
+
 `retrieval-and-ranking.md`
 
 - domain browse
@@ -80,6 +88,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - first normalized source/package/skill-unit ledger for the current repo set
 
+`unit-ranking-ledger.schema.json`
+
+- schema for Phase 1.5 taxonomy/tag/score/grouped-result output
+
+`phase-1.5-ledger.round1.json`
+
+- first unit-level taxonomy, tag, and grouped ranking ledger
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -87,6 +103,8 @@ The product is designed `internal-first`, but with a data model and subsystem la
 3. `phase-1-core-model.md`
 4. `extraction-rules.md`
 5. `phase-1-workflow.md`
-6. `retrieval-and-ranking.md`
-7. `benchmarking-subsystem.md`
-8. `roadmap.md`
+6. `phase-1.5-unit-ranking.md`
+7. `phase-1.5-results.md`
+8. `retrieval-and-ranking.md`
+9. `benchmarking-subsystem.md`
+10. `roadmap.md`
