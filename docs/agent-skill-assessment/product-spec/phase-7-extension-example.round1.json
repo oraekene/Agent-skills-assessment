@@ -1,0 +1,54 @@
+{
+  "version": "phase-7-round1",
+  "matches": [
+    {
+      "match_id": "match-github-impeccable",
+      "entity_type": "source",
+      "matched_record_id": "src-impeccable",
+      "match_confidence": "high",
+      "page_context": "github-repo"
+    },
+    {
+      "match_id": "match-directory-taste-redesign",
+      "entity_type": "skill-unit",
+      "matched_record_id": "unit-taste-redesign",
+      "match_confidence": "high",
+      "page_context": "skills-directory-card"
+    }
+  ],
+  "badges": [
+    {
+      "match_id": "match-github-impeccable",
+      "label": "strong",
+      "score_band": "80-94",
+      "freshness_state": "recently-updated"
+    },
+    {
+      "match_id": "match-directory-taste-redesign",
+      "label": "good",
+      "score_band": "70-79",
+      "freshness_state": "fresh"
+    }
+  ],
+  "popovers": [
+    {
+      "match_id": "match-github-impeccable",
+      "display_name": "impeccable",
+      "score_band": "80-94",
+      "one_line_summary": "Strong public candidate for structured design audits and UI improvement work.",
+      "better_alternatives": []
+    },
+    {
+      "match_id": "match-directory-taste-redesign",
+      "display_name": "taste-redesign",
+      "score_band": "70-79",
+      "one_line_summary": "Strong redesign taste steering with less structure than the top option.",
+      "better_alternatives": [
+        {
+          "display_name": "impeccable",
+          "reason": "Better fit for design audits."
+        }
+      ]
+    }
+  ]
+}

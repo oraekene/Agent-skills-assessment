@@ -136,6 +136,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - summary of Phase 6 public directory outputs
 
+`phase-7-chrome-extension.md`
+
+- concrete extension rules for entity detection, badges, popovers, and directory links
+
+`phase-7-results.md`
+
+- summary of Phase 7 extension outputs
+
 `roadmap.md`
 
 - phased delivery plan from current toolkit to future directory
@@ -232,6 +240,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - first machine-readable public directory example
 
+`extension-surface.schema.json`
+
+- schema for extension surface objects
+
+`phase-7-extension-example.round1.json`
+
+- first machine-readable extension example
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -259,4 +275,6 @@ The product is designed `internal-first`, but with a data model and subsystem la
 23. `phase-5-results.md`
 24. `phase-6-public-directory.md`
 25. `phase-6-results.md`
-26. `roadmap.md`
+26. `phase-7-chrome-extension.md`
+27. `phase-7-results.md`
+28. `roadmap.md`
