@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Skill Directory Core Entities",
+  "type": "object",
+  "required": ["sources", "packages", "skill_units"],
+  "properties": {
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "packages": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/package" }
+    },
+    "skill_units": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/skillUnit" }
+    },
+    "taxonomy_assignments": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/taxonomyAssignment" }
+    },
+    "score_records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/scoreRecord" }
+    },
+    "benchmark_definitions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/benchmarkDefinition" }
+    },
+    "benchmark_results": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/benchmarkResult" }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["source_id", "source_name", "source_type", "origin_url"],
+      "properties": {
+        "source_id": { "type": "string" },
+        "source_name": { "type": "string" },
+        "source_type": { "type": "string" },
+        "origin_url": { "type": "string" },
+        "source_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "package": {
+      "type": "object",
+      "required": ["package_id", "source_id", "package_name"],
+      "properties": {
+        "package_id": { "type": "string" },
+        "source_id": { "type": "string" },
+        "package_name": { "type": "string" },
+        "install_surface": { "type": "string" }
+      }
+    },
+    "skillUnit": {
+      "type": "object",
+      "required": ["unit_id", "package_id", "unit_type", "display_name", "path"],
+      "properties": {
+        "unit_id": { "type": "string" },
+        "package_id": { "type": "string" },
+        "unit_type": { "type": "string" },
+        "display_name": { "type": "string" },
+        "path": { "type": "string" },
+        "source_of_truth": { "type": "boolean" },
+        "is_generated_duplicate": { "type": "boolean" },
+        "description": { "type": "string" }
+      }
+    },
+    "taxonomyAssignment": {
+      "type": "object",
+      "required": ["assignment_id", "unit_id", "taxonomy_version"],
+      "properties": {
+        "assignment_id": { "type": "string" },
+        "unit_id": { "type": "string" },
+        "taxonomy_version": { "type": "string" },
+        "primary_domain": { "type": "string" },
+        "function_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "industry_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "role_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "context_scope_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "scoreRecord": {
+      "type": "object",
+      "required": ["score_id", "subject_type", "subject_id", "score_family", "score_value", "score_band"],
+      "properties": {
+        "score_id": { "type": "string" },
+        "subject_type": { "type": "string" },
+        "subject_id": { "type": "string" },
+        "score_family": { "type": "string" },
+        "score_value": { "type": "number" },
+        "score_band": { "type": "string" },
+        "rubric_version": { "type": "string" },
+        "evidence_coverage": { "type": "number" },
+        "unknown_share": { "type": "number" }
+      }
+    },
+    "benchmarkDefinition": {
+      "type": "object",
+      "required": ["benchmark_id", "benchmark_name", "benchmark_type", "prompt_or_task"],
+      "properties": {
+        "benchmark_id": { "type": "string" },
+        "benchmark_name": { "type": "string" },
+        "benchmark_type": { "type": "string" },
+        "prompt_or_task": { "type": "string" },
+        "required_artifacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "benchmarkResult": {
+      "type": "object",
+      "required": ["benchmark_result_id", "benchmark_id", "unit_id", "status"],
+      "properties": {
+        "benchmark_result_id": { "type": "string" },
+        "benchmark_id": { "type": "string" },
+        "unit_id": { "type": "string" },
+        "status": { "type": "string" },
+        "runner_type": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Skill Assessment Taxonomy Registry",
+  "type": "object",
+  "required": ["version", "domains", "function_modes"],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "domains": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/category" }
+    },
+    "function_modes": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/category" }
+    }
+  },
+  "$defs": {
+    "category": {
+      "type": "object",
+      "required": [
+        "id",
+        "name",
+        "definition",
+        "include_rules",
+        "exclude_rules",
+        "boundary_test",
+        "example_members",
+        "example_non_members",
+        "created_in_version"
+      ],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "definition": { "type": "string" },
+        "include_rules": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "exclude_rules": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "boundary_test": { "type": "string" },
+        "example_members": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "example_non_members": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "created_in_version": { "type": "string" },
+        "justification": { "type": "string" }
+      }
+    }
+  }
+}

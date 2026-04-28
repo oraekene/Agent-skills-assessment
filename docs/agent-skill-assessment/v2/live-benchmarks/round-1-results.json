@@ -1,0 +1,91 @@
+{
+  "round_id": "live-round-1",
+  "status": "blocked-before-repo-runs",
+  "runner": "codex-exec-tier1",
+  "preflight_attempts": [
+    {
+      "command": "codex login status",
+      "execution_context": "sandboxed",
+      "result": "failed",
+      "observed_output": "Error loading configuration: Access is denied. (os error 5)"
+    },
+    {
+      "command": "codex exec --skip-git-repo-check -C . --json \"Reply with exactly LIVE-BENCHMARK-OK\"",
+      "execution_context": "sandboxed",
+      "result": "failed",
+      "observed_output": "Error: Access is denied. (os error 5)"
+    },
+    {
+      "command": "codex login status",
+      "execution_context": "unsandboxed escalation attempt",
+      "result": "failed",
+      "observed_output": "Program 'codex.exe' failed to run: Access is denied"
+    },
+    {
+      "command": "codex exec --skip-git-repo-check -C . --json \"Reply with exactly LIVE-BENCHMARK-OK\"",
+      "execution_context": "unsandboxed escalation attempt",
+      "result": "failed",
+      "observed_output": "Program 'codex.exe' failed to run: Access is denied"
+    },
+    {
+      "command": "& \"C:\\Users\\IFEANYI-ORAE\\AppData\\Local\\OpenAI\\Codex\\bin\\codex.exe\" --version",
+      "execution_context": "unsandboxed absolute-path launch",
+      "result": "failed",
+      "observed_output": "The term 'C:\\Users\\IFEANYI-ORAE\\AppData\\Local\\OpenAI\\Codex\\bin\\codex.exe' is not recognized as the name of a cmdlet, function, script file, or operable program."
+    },
+    {
+      "command": "& \"C:\\Users\\IFEANYI-ORAE\\AppData\\Local\\OpenAI\\Codex\\bin\\codex.exe\" login status",
+      "execution_context": "unsandboxed absolute-path launch",
+      "result": "failed",
+      "observed_output": "The term 'C:\\Users\\IFEANYI-ORAE\\AppData\\Local\\OpenAI\\Codex\\bin\\codex.exe' is not recognized as the name of a cmdlet, function, script file, or operable program."
+    }
+  ],
+  "repo_statuses": [
+    {
+      "repo_id": "oh-my-codex",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    },
+    {
+      "repo_id": "superpowers",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    },
+    {
+      "repo_id": "claude-agents",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    },
+    {
+      "repo_id": "ralph",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    },
+    {
+      "repo_id": "mattpocock-skills",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    },
+    {
+      "repo_id": "marketingskills",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    },
+    {
+      "repo_id": "inside-lago-voice-skill",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    },
+    {
+      "repo_id": "taste-skill",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    },
+    {
+      "repo_id": "impeccable",
+      "status": "blocked",
+      "reason": "Runner unavailable before benchmark launch."
+    }
+  ],
+  "next_required_action": "Live benchmarks are skipped for now. A launchable Codex CLI runner from this thread would be required before repo-specific runs can truthfully start."
+}

@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Agent Skill Assessment Evidence Ledger",
+  "type": "object",
+  "required": [
+    "version",
+    "generated_for_environment",
+    "repos"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "generated_for_environment": {
+      "type": "object",
+      "required": ["agent_runtime", "os", "workspace_mode"],
+      "properties": {
+        "agent_runtime": { "type": "string" },
+        "os": { "type": "string" },
+        "workspace_mode": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "repos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "repo_id",
+          "repo_url",
+          "primary_arena",
+          "repo_findings",
+          "representative_assets",
+          "arena_scores"
+        ],
+        "properties": {
+          "repo_id": { "type": "string" },
+          "repo_url": { "type": "string" },
+          "primary_arena": { "type": "string" },
+          "secondary_arenas": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "repo_findings": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/finding" }
+          },
+          "representative_assets": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["asset_id", "asset_path", "kind", "static_score"],
+              "properties": {
+                "asset_id": { "type": "string" },
+                "asset_path": { "type": "string" },
+                "kind": { "type": "string" },
+                "asset_findings": {
+                  "type": "array",
+                  "items": { "$ref": "#/$defs/finding" }
+                },
+                "static_score": {
+                  "type": "object",
+                  "required": ["total", "category_points"],
+                  "properties": {
+                    "total": { "type": "integer" },
+                    "category_points": {
+                      "type": "object",
+                      "required": [
+                        "trigger_clarity",
+                        "workflow_explicitness",
+                        "verification_explicitness",
+                        "guardrail_strength",
+                        "context_discipline",
+                        "codex_fit",
+                        "composability",
+                        "packaging_operational_fit",
+                        "artifact_value_clarity",
+                        "maintenance_evidence"
+                      ],
+                      "properties": {
+                        "trigger_clarity": { "type": "integer" },
+                        "workflow_explicitness": { "type": "integer" },
+                        "verification_explicitness": { "type": "integer" },
+                        "guardrail_strength": { "type": "integer" },
+                        "context_discipline": { "type": "integer" },
+                        "codex_fit": { "type": "integer" },
+                        "composability": { "type": "integer" },
+                        "packaging_operational_fit": { "type": "integer" },
+                        "artifact_value_clarity": { "type": "integer" },
+                        "maintenance_evidence": { "type": "integer" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "arena_scores": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["arena", "candidate_score_total", "breakdown", "install_label"],
+              "properties": {
+                "arena": { "type": "string" },
+                "candidate_score_total": { "type": "integer" },
+                "breakdown": {
+                  "type": "object",
+                  "required": [
+                    "domain_fit",
+                    "codex_setup_fit",
+                    "representative_asset_quality",
+                    "verification_guardrails",
+                    "operational_burden",
+                    "depth_differentiation"
+                  ],
+                  "properties": {
+                    "domain_fit": { "type": "integer" },
+                    "codex_setup_fit": { "type": "integer" },
+                    "representative_asset_quality": { "type": "integer" },
+                    "verification_guardrails": { "type": "integer" },
+                    "operational_burden": { "type": "integer" },
+                    "depth_differentiation": { "type": "integer" }
+                  }
+                },
+                "install_label": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "required": ["field", "value", "evidence_type", "basis"],
+      "properties": {
+        "field": { "type": "string" },
+        "value": {},
+        "evidence_type": {
+          "type": "string",
+          "enum": ["E", "S", "D", "U"]
+        },
+        "basis": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source", "note"],
+            "properties": {
+              "source": { "type": "string" },
+              "note": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

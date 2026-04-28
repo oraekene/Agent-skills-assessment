@@ -1,0 +1,456 @@
+{
+  "version": "2.1.0",
+  "domains": [
+    {
+      "id": "orchestration-and-workflow",
+      "name": "Orchestration And Workflow",
+      "definition": "Assets whose primary value is controlling how work is sequenced, delegated, gated, reviewed, or completed.",
+      "include_rules": [
+        "Planning systems",
+        "Execution loops",
+        "Multi-agent routing",
+        "Workflow state and completion control"
+      ],
+      "exclude_rules": [
+        "Domain-specific implementation skills whose workflow exists only to serve another primary domain"
+      ],
+      "boundary_test": "Belongs here if the primary value is governing the work process itself, not mainly producing domain output like code, design, or marketing artifacts.",
+      "example_members": [
+        "Planning workflow library",
+        "Autonomous completion loop",
+        "Global agent operating contract"
+      ],
+      "example_non_members": [
+        "Pure TDD skill",
+        "Voice template",
+        "Landing page CRO audit skill"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "software-engineering",
+      "name": "Software Engineering",
+      "definition": "Assets whose primary value is producing, debugging, testing, reviewing, or improving software and code.",
+      "include_rules": [
+        "TDD",
+        "Debugging",
+        "Refactoring",
+        "Architecture",
+        "API and interface design"
+      ],
+      "exclude_rules": [
+        "Top-level workflow systems"
+      ],
+      "boundary_test": "Belongs here if the primary value is better software output, not mainly workflow control.",
+      "example_members": [
+        "TDD skill",
+        "Refactor skill",
+        "Bug triage skill"
+      ],
+      "example_non_members": [
+        "Global orchestration system",
+        "Design audit skill",
+        "Marketing context skill"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "design-and-ux",
+      "name": "Design And UX",
+      "definition": "Assets whose primary value is visual quality, interaction quality, layout, taste, motion, accessibility, or design critique.",
+      "include_rules": [
+        "Redesign systems",
+        "UI audits",
+        "Taste systems",
+        "Design commands"
+      ],
+      "exclude_rules": [
+        "General coding skills that only incidentally touch UI"
+      ],
+      "boundary_test": "Belongs here if the primary value is better user experience or interface quality, not mainly implementation correctness.",
+      "example_members": [
+        "UI redesign skill",
+        "Design critique workflow",
+        "Frontend taste system"
+      ],
+      "example_non_members": [
+        "TDD workflow",
+        "Product marketing context skill",
+        "Voice calibration template"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "marketing-and-growth",
+      "name": "Marketing And Growth",
+      "definition": "Assets whose primary value is positioning, messaging, conversion, acquisition, retention, launch, pricing, GTM, or growth.",
+      "include_rules": [
+        "CRO",
+        "Product marketing context",
+        "Launch planning",
+        "SEO",
+        "Growth analytics"
+      ],
+      "exclude_rules": [
+        "General writing systems without explicit funnel or market logic"
+      ],
+      "boundary_test": "Belongs here if the primary value is market, funnel, or growth impact, not just good writing.",
+      "example_members": [
+        "CRO audit skill",
+        "Positioning context skill",
+        "Launch messaging workflow"
+      ],
+      "example_non_members": [
+        "General content writer",
+        "TDD skill",
+        "Packaging transformer"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "writing-voice-and-content",
+      "name": "Writing, Voice, And Content",
+      "definition": "Assets whose primary value is authored language quality, editorial output, tone, channel adaptation, or voice calibration.",
+      "include_rules": [
+        "Content writers",
+        "Voice templates",
+        "Editorial rewrite systems",
+        "Audience adaptation systems"
+      ],
+      "exclude_rules": [
+        "Marketing systems whose main value is funnel strategy rather than authored voice"
+      ],
+      "boundary_test": "Belongs here if the primary value is how the language sounds or communicates, not mainly funnel or market strategy.",
+      "example_members": [
+        "Voice skill template",
+        "Editorial rewrite agent",
+        "Channel adaptation workflow"
+      ],
+      "example_non_members": [
+        "CRO framework",
+        "Global orchestration layer",
+        "Deployment assistant"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "research-analysis-and-strategy",
+      "name": "Research, Analysis, And Strategy",
+      "definition": "Assets whose primary value is gathering information, synthesizing evidence, comparing options, or producing strategic analysis.",
+      "include_rules": [
+        "Research agents",
+        "Competitive analysis",
+        "Option comparison workflows",
+        "Strategic analysis"
+      ],
+      "exclude_rules": [
+        "Execution-first systems with only a brief planning step"
+      ],
+      "boundary_test": "Belongs here if the primary value is evidence synthesis or strategic comparison rather than direct execution.",
+      "example_members": [
+        "Competitive analysis skill",
+        "Research synthesis agent",
+        "Option comparison workflow"
+      ],
+      "example_non_members": [
+        "Pure implementation agent",
+        "UI redesign skill",
+        "Environment bootstrap script"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "operations-automation-and-infrastructure",
+      "name": "Operations, Automation, And Infrastructure",
+      "definition": "Assets whose primary value is setup, deployment, infra operations, environment management, automation, or operational reliability.",
+      "include_rules": [
+        "Deployment helpers",
+        "Environment bootstrap systems",
+        "CI/CD workflows",
+        "Operational automation"
+      ],
+      "exclude_rules": [
+        "Coding skills that only run tests or shell commands as part of development"
+      ],
+      "boundary_test": "Belongs here if the primary value is operating or automating systems, not mainly producing application features.",
+      "example_members": [
+        "Deployment workflow",
+        "Infrastructure maintenance skill",
+        "Environment setup automation"
+      ],
+      "example_non_members": [
+        "TDD skill",
+        "Voice template",
+        "Positioning framework"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "data-and-analytics",
+      "name": "Data And Analytics",
+      "definition": "Assets whose primary value is event design, measurement, data analysis, reporting, or metrics interpretation.",
+      "include_rules": [
+        "Analytics setup",
+        "Reporting workflows",
+        "Metric analysis",
+        "Event schema design"
+      ],
+      "exclude_rules": [
+        "Marketing systems where analytics is only a supporting subskill"
+      ],
+      "boundary_test": "Belongs here if the primary value is measurement and analytic interpretation, not mainly growth strategy or writing.",
+      "example_members": [
+        "Analytics implementation skill",
+        "Metrics review workflow",
+        "Dashboard analysis agent"
+      ],
+      "example_non_members": [
+        "CRO framework",
+        "General orchestration layer",
+        "Design taste system"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "product-and-business-strategy",
+      "name": "Product And Business Strategy",
+      "definition": "Assets whose primary value is product scoping, roadmap reasoning, prioritization, pricing logic, or business model thinking.",
+      "include_rules": [
+        "PRD systems",
+        "Prioritization frameworks",
+        "Strategic planning systems",
+        "Business-model reasoning"
+      ],
+      "exclude_rules": [
+        "Workflow systems whose main value is orchestration rather than product reasoning"
+      ],
+      "boundary_test": "Belongs here if the primary value is product or business direction, not mainly execution workflow or coding.",
+      "example_members": [
+        "PRD writer",
+        "Prioritization assistant",
+        "Roadmap strategy workflow"
+      ],
+      "example_non_members": [
+        "Autonomous execution loop",
+        "Frontend redesign system",
+        "Content writer"
+      ],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "meta-skillcraft-and-tooling",
+      "name": "Meta Skillcraft And Tooling",
+      "definition": "Assets whose primary value is creating, packaging, validating, transforming, or distributing other skills.",
+      "include_rules": [
+        "Skill packaging systems",
+        "Provider transformers",
+        "Build systems for skill outputs",
+        "Validation frameworks for skills"
+      ],
+      "exclude_rules": [
+        "Ordinary end-user skills"
+      ],
+      "boundary_test": "Belongs here if the primary value is skill-system construction or maintenance, not direct end-user task execution.",
+      "example_members": [
+        "Provider transform pipeline",
+        "Skill registry build system",
+        "Skill validation CLI"
+      ],
+      "example_non_members": [
+        "TDD skill",
+        "Marketing audit skill",
+        "Voice template"
+      ],
+      "created_in_version": "2.1.0"
+    }
+  ],
+  "function_modes": [
+    {
+      "id": "plan",
+      "name": "Plan",
+      "definition": "The asset primarily structures goals, tasks, scope, or next steps before execution.",
+      "include_rules": [
+        "Plans work before implementation",
+        "Defines scope or tasks",
+        "Creates decision-ready plans"
+      ],
+      "exclude_rules": [
+        "Pure execution without planning emphasis"
+      ],
+      "boundary_test": "Belongs here if the primary action is deciding or structuring what to do, not directly doing it.",
+      "example_members": ["Planning skill", "PRD planning step"],
+      "example_non_members": ["Code implementation skill", "Voice rewrite template"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "implement",
+      "name": "Implement",
+      "definition": "The asset primarily creates, edits, or executes the target output directly.",
+      "include_rules": [
+        "Writes code",
+        "Produces content directly",
+        "Executes the change"
+      ],
+      "exclude_rules": [
+        "Pure review or planning assets"
+      ],
+      "boundary_test": "Belongs here if the primary action is making the output itself.",
+      "example_members": ["Coding skill", "Content drafting agent"],
+      "example_non_members": ["Audit-only workflow", "Validation-only checker"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "review",
+      "name": "Review",
+      "definition": "The asset primarily evaluates an existing artifact for quality, issues, or improvement opportunities.",
+      "include_rules": [
+        "Reviews code",
+        "Reviews design",
+        "Reviews documents or plans"
+      ],
+      "exclude_rules": [
+        "Assets that only implement or plan"
+      ],
+      "boundary_test": "Belongs here if the primary action is evaluative judgment on existing work.",
+      "example_members": ["Code review skill", "Design critique skill"],
+      "example_non_members": ["Plan generator", "Deployment helper"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "verify",
+      "name": "Verify",
+      "definition": "The asset primarily checks correctness, completion, or conformance against explicit criteria.",
+      "include_rules": [
+        "Runs or defines checks",
+        "Validates acceptance criteria",
+        "Confirms conformance"
+      ],
+      "exclude_rules": [
+        "General review without explicit validation"
+      ],
+      "boundary_test": "Belongs here if the primary action is confirmation against criteria rather than broader critique.",
+      "example_members": ["Validation checklist skill", "Test verification workflow"],
+      "example_non_members": ["Idea brainstorming skill", "Brand voice template"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "audit",
+      "name": "Audit",
+      "definition": "The asset primarily inspects a system or artifact against a framework to identify gaps and prioritized fixes.",
+      "include_rules": [
+        "Uses an audit framework",
+        "Finds gaps and fixes",
+        "Prioritizes issues"
+      ],
+      "exclude_rules": [
+        "Simple review without a structured audit frame"
+      ],
+      "boundary_test": "Belongs here if the primary action is structured gap analysis against a framework.",
+      "example_members": ["CRO audit skill", "Design audit system"],
+      "example_non_members": ["Direct implementation skill", "Packaging transformer"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "research",
+      "name": "Research",
+      "definition": "The asset primarily gathers, compares, or synthesizes information before decision or action.",
+      "include_rules": [
+        "Collects evidence",
+        "Compares options",
+        "Synthesizes findings"
+      ],
+      "exclude_rules": [
+        "Execution-first systems with only brief context gathering"
+      ],
+      "boundary_test": "Belongs here if the primary action is information acquisition or synthesis.",
+      "example_members": ["Research agent", "Competitive analysis workflow"],
+      "example_non_members": ["Deployment automation", "Pure content drafting skill"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "rewrite",
+      "name": "Rewrite",
+      "definition": "The asset primarily transforms existing content into a new version with improved fit, tone, or quality.",
+      "include_rules": [
+        "Edits existing text",
+        "Changes tone or voice",
+        "Adapts content to a new channel"
+      ],
+      "exclude_rules": [
+        "Pure first-draft generation"
+      ],
+      "boundary_test": "Belongs here if the primary action is transforming existing material rather than creating from scratch.",
+      "example_members": ["Voice rewrite skill", "Channel adaptation workflow"],
+      "example_non_members": ["PRD planning tool", "Global orchestration layer"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "orchestrate",
+      "name": "Orchestrate",
+      "definition": "The asset primarily routes, sequences, coordinates, or governs work across steps, tools, or agents.",
+      "include_rules": [
+        "Routes work",
+        "Coordinates steps",
+        "Controls execution flow"
+      ],
+      "exclude_rules": [
+        "Single-purpose implementation skills"
+      ],
+      "boundary_test": "Belongs here if the primary action is governing work flow rather than producing domain output directly.",
+      "example_members": ["Global workflow layer", "Agent routing system"],
+      "example_non_members": ["Design audit skill", "Voice template"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "template",
+      "name": "Template",
+      "definition": "The asset primarily provides a reusable structure to be filled, calibrated, or customized.",
+      "include_rules": [
+        "Provides structured fill-in framework",
+        "Requires local calibration",
+        "Acts as reusable scaffold"
+      ],
+      "exclude_rules": [
+        "Fully operational skills that do not depend on user calibration"
+      ],
+      "boundary_test": "Belongs here if the primary action is scaffolding future work through a reusable structure.",
+      "example_members": ["Voice skill template", "PRD template"],
+      "example_non_members": ["Live orchestration engine", "Deployment helper"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "package",
+      "name": "Package",
+      "definition": "The asset primarily builds, transforms, validates, or distributes skill systems or related tooling.",
+      "include_rules": [
+        "Builds skill outputs",
+        "Transforms provider formats",
+        "Packages skill artifacts"
+      ],
+      "exclude_rules": [
+        "End-user execution skills"
+      ],
+      "boundary_test": "Belongs here if the primary action is preparing the skill system itself for use.",
+      "example_members": ["Skill build pipeline", "Provider transformer"],
+      "example_non_members": ["TDD skill", "CRO audit skill"],
+      "created_in_version": "2.1.0"
+    },
+    {
+      "id": "operate",
+      "name": "Operate",
+      "definition": "The asset primarily manages runtime systems, deployments, environments, or operational procedures.",
+      "include_rules": [
+        "Deploys",
+        "Bootstraps environments",
+        "Operates infrastructure"
+      ],
+      "exclude_rules": [
+        "Development-only implementation skills"
+      ],
+      "boundary_test": "Belongs here if the primary action is running or maintaining systems in operation.",
+      "example_members": ["Deployment workflow", "Environment bootstrap tool"],
+      "example_non_members": ["Voice rewrite template", "Planning skill"],
+      "created_in_version": "2.1.0"
+    }
+  ]
+}

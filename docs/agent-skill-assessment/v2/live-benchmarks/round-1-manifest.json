@@ -1,0 +1,84 @@
+{
+  "round_id": "live-round-1",
+  "runner": "codex-exec-tier1",
+  "status": "blocked-before-repo-runs",
+  "environment": {
+    "workspace": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project",
+    "os": "Windows",
+    "benchmark_tier": "Tier 1 simulated injection via real Codex CLI exec sessions"
+  },
+  "repos": [
+    {
+      "repo_id": "oh-my-codex",
+      "benchmark_id": "O1",
+      "benchmark_name": "Ambiguous Request To Approved Plan",
+      "runner_target": "skills/deep-interview/SKILL.md",
+      "prompt": "You are evaluating a clarification skill. Use the supplied skill instructions. The project request is: Add authentication to an existing app, but keep it simple and do not break current onboarding. Ask exactly one question at a time until you can produce an execution-ready clarified spec. Do not implement code.",
+      "required_artifacts": ["clarified scope", "non-goals", "decision boundaries", "handoff recommendation"]
+    },
+    {
+      "repo_id": "superpowers",
+      "benchmark_id": "O1",
+      "benchmark_name": "Ambiguous Request To Approved Plan",
+      "runner_target": "skills/brainstorming/SKILL.md",
+      "prompt": "Use the supplied skill instructions. The project request is: Add authentication to an existing app, but keep it simple and do not break current onboarding. Follow the skill and stop at the design/spec phase.",
+      "required_artifacts": ["clarifying sequence", "2-3 approaches", "design", "written spec path or equivalent output"]
+    },
+    {
+      "repo_id": "claude-agents",
+      "benchmark_id": "W2",
+      "benchmark_name": "Channel Adaptation",
+      "runner_target": "agents/content-writer.md",
+      "prompt": "Use the supplied agent instructions. Convert one product announcement into three formats: blog outline, LinkedIn post, and email draft. Keep facts verified and save the outline artifact if the agent requires it.",
+      "required_artifacts": ["outline or structured plan", "channel-adapted copy", "fact-control behavior"]
+    },
+    {
+      "repo_id": "ralph",
+      "benchmark_id": "P1",
+      "benchmark_name": "PRD Generation For Loop Readiness",
+      "runner_target": "skills/prd/SKILL.md",
+      "prompt": "Use the supplied PRD skill. Create a PRD for: Add priority levels to tasks in a todo app. Ask only critical clarifying questions, then produce a PRD with small user stories and explicit acceptance criteria.",
+      "required_artifacts": ["clarifying questions", "PRD", "small user stories", "acceptance criteria"]
+    },
+    {
+      "repo_id": "mattpocock-skills",
+      "benchmark_id": "C2",
+      "benchmark_name": "TDD Feature Slice",
+      "runner_target": "tdd/SKILL.md",
+      "prompt": "Use the supplied TDD skill. Plan and describe the first two vertical-slice tests and minimal implementation approach for: add retry logic to a failed network request helper. Do not skip the red-green-refactor structure.",
+      "required_artifacts": ["behavior-first test plan", "vertical slices", "minimal implementation logic"]
+    },
+    {
+      "repo_id": "marketingskills",
+      "benchmark_id": "M1",
+      "benchmark_name": "Product Marketing Context Creation",
+      "runner_target": "skills/product-marketing-context/SKILL.md",
+      "prompt": "Use the supplied skill instructions. Create a v1 product marketing context for a fictional SaaS called SignalNest, a customer support analytics product for B2B SaaS teams.",
+      "required_artifacts": [".agents/product-marketing-context.md structure", "positioning", "target audience", "proof points", "goals"]
+    },
+    {
+      "repo_id": "inside-lago-voice-skill",
+      "benchmark_id": "W3",
+      "benchmark_name": "Drafted Vs Sent Calibration",
+      "runner_target": "README template categories",
+      "prompt": "Use the supplied voice-skill template guidance. Given a generic AI draft and a tighter founder rewrite, infer voice rules and produce a reusable calibration summary.",
+      "required_artifacts": ["voice rules", "anti-filler patterns", "draft-vs-sent lessons"]
+    },
+    {
+      "repo_id": "taste-skill",
+      "benchmark_id": "D2",
+      "benchmark_name": "Existing UI Redesign",
+      "runner_target": "skills/redesign-skill/SKILL.md",
+      "prompt": "Use the supplied redesign skill. Audit and propose targeted improvements for a generic SaaS landing page with centered hero, three equal feature cards, purple gradient buttons, and no empty states.",
+      "required_artifacts": ["scan", "diagnosis", "targeted redesign recommendations"]
+    },
+    {
+      "repo_id": "impeccable",
+      "benchmark_id": "D3",
+      "benchmark_name": "Design Audit Only",
+      "runner_target": "source/skills/impeccable/SKILL.md",
+      "prompt": "Use the supplied impeccable skill. Audit a bland product dashboard UI and produce a design critique with concrete fixes. Do not implement code.",
+      "required_artifacts": ["register choice", "context-aware critique", "design laws applied", "concrete fixes"]
+    }
+  ]
+}

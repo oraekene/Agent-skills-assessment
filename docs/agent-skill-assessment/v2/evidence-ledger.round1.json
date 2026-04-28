@@ -1,0 +1,818 @@
+{
+  "version": "2.0.0-round1",
+  "generated_for_environment": {
+    "agent_runtime": "Codex desktop thread",
+    "os": "Windows",
+    "workspace_mode": "minimal workspace, Codex app-centered",
+    "notes": "All findings must be backed by explicit evidence, structural evidence, deterministic derivation, or unknown."
+  },
+  "repos": [
+    {
+      "repo_id": "oh-my-codex",
+      "repo_url": "https://github.com/Yeachan-Heo/oh-my-codex",
+      "primary_arena": "workspace-orchestration",
+      "secondary_arenas": ["coding-craft"],
+      "repo_findings": [
+        {
+          "field": "codex_support",
+          "value": "explicit",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/Yeachan-Heo/oh-my-codex/main/README.md",
+              "note": "README states OMX is a workflow layer for OpenAI Codex CLI."
+            }
+          ]
+        },
+        {
+          "field": "environment_caveat",
+          "value": "native Windows and Codex App are not the default experience",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/Yeachan-Heo/oh-my-codex/main/README.md",
+              "note": "README explicitly warns native Windows and Codex App may break or behave inconsistently."
+            }
+          ]
+        },
+        {
+          "field": "conflict_footprint",
+          "value": "high",
+          "evidence_type": "D",
+          "basis": [
+            {
+              "source": "V2 scope-footprint rule",
+              "note": "Top-level AGENTS contract plus runtime hooks and broad orchestration lanes."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "deep-interview",
+          "asset_path": "skills/deep-interview/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "trigger_mode",
+              "value": "explicit skill invocation and automatic use for ambiguity",
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/Yeachan-Heo/oh-my-codex/main/skills/deep-interview/SKILL.md",
+                  "note": "Skill description and trigger conditions explicitly list when to use it."
+                }
+              ]
+            },
+            {
+              "field": "files_generated",
+              "value": [".omx/context/{slug}-{timestamp}.md", ".omx/interviews/{slug}-{timestamp}.md"],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/Yeachan-Heo/oh-my-codex/main/skills/deep-interview/SKILL.md",
+                  "note": "Phase 0 and Phase 4 explicitly name context snapshot and interview artifact paths."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 85,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 12,
+              "verification_explicitness": 10,
+              "guardrail_strength": 12,
+              "context_discipline": 8,
+              "codex_fit": 8,
+              "composability": 4,
+              "packaging_operational_fit": 3,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 10
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "workspace-orchestration",
+          "candidate_score_total": 18,
+          "breakdown": {
+            "domain_fit": 4,
+            "codex_setup_fit": 2,
+            "representative_asset_quality": 4,
+            "verification_guardrails": 4,
+            "operational_burden": 1,
+            "depth_differentiation": 3
+          },
+          "install_label": "fork-first"
+        }
+      ]
+    },
+    {
+      "repo_id": "superpowers",
+      "repo_url": "https://github.com/obra/superpowers",
+      "primary_arena": "workspace-orchestration",
+      "secondary_arenas": ["coding-craft"],
+      "repo_findings": [
+        {
+          "field": "codex_support",
+          "value": "explicit",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://github.com/obra/superpowers",
+              "note": "README includes Codex installation path and docs."
+            }
+          ]
+        },
+        {
+          "field": "methodology_scope",
+          "value": "broad process discipline",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/obra/superpowers/main/skills/brainstorming/SKILL.md",
+              "note": "Brainstorming must precede creative and implementation work."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "brainstorming",
+          "asset_path": "skills/brainstorming/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "files_generated",
+              "value": ["docs/superpowers/specs/YYYY-MM-DD--design.md"],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/obra/superpowers/main/skills/brainstorming/SKILL.md",
+                  "note": "Spec location is explicitly required."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 94,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 12,
+              "verification_explicitness": 10,
+              "guardrail_strength": 12,
+              "context_discipline": 4,
+              "codex_fit": 12,
+              "composability": 6,
+              "packaging_operational_fit": 10,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 10
+            }
+          }
+        },
+        {
+          "asset_id": "test-driven-development",
+          "asset_path": "skills/test-driven-development/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "verification_checklist",
+              "value": "explicit checklist present",
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/obra/superpowers/main/skills/test-driven-development/SKILL.md",
+                  "note": "Skill ends with a verification checklist before marking work complete."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 89,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 12,
+              "verification_explicitness": 10,
+              "guardrail_strength": 12,
+              "context_discipline": 0,
+              "codex_fit": 12,
+              "composability": 8,
+              "packaging_operational_fit": 10,
+              "artifact_value_clarity": 7,
+              "maintenance_evidence": 10
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "workspace-orchestration",
+          "candidate_score_total": 23,
+          "breakdown": {
+            "domain_fit": 4,
+            "codex_setup_fit": 4,
+            "representative_asset_quality": 4,
+            "verification_guardrails": 4,
+            "operational_burden": 3,
+            "depth_differentiation": 4
+          },
+          "install_label": "default-install"
+        },
+        {
+          "arena": "coding-craft",
+          "candidate_score_total": 23,
+          "breakdown": {
+            "domain_fit": 4,
+            "codex_setup_fit": 4,
+            "representative_asset_quality": 4,
+            "verification_guardrails": 4,
+            "operational_burden": 3,
+            "depth_differentiation": 4
+          },
+          "install_label": "default-install"
+        }
+      ]
+    },
+    {
+      "repo_id": "claude-agents",
+      "repo_url": "https://github.com/iannuttall/claude-agents",
+      "primary_arena": "lightweight-specialists",
+      "secondary_arenas": ["writing-and-voice", "frontend-design-craft"],
+      "repo_findings": [
+        {
+          "field": "codex_support",
+          "value": "not_proven",
+          "evidence_type": "U",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/iannuttall/claude-agents/main/README.md",
+              "note": "README names Claude Code only and does not mention Codex."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "content-writer",
+          "asset_path": "agents/content-writer.md",
+          "kind": "agent",
+          "asset_findings": [
+            {
+              "field": "artifact_output",
+              "value": [".content/{slug}.md"],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/iannuttall/claude-agents/main/agents/content-writer.md",
+                  "note": "Outline mode explicitly saves to .content/{slug}.md by default."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 64,
+            "category_points": {
+              "trigger_clarity": 6,
+              "workflow_explicitness": 10,
+              "verification_explicitness": 7,
+              "guardrail_strength": 8,
+              "context_discipline": 4,
+              "codex_fit": 0,
+              "composability": 6,
+              "packaging_operational_fit": 7,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 6
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "writing-and-voice",
+          "candidate_score_total": 11,
+          "breakdown": {
+            "domain_fit": 2,
+            "codex_setup_fit": 0,
+            "representative_asset_quality": 2,
+            "verification_guardrails": 2,
+            "operational_burden": 3,
+            "depth_differentiation": 2
+          },
+          "install_label": "reference-only"
+        }
+      ]
+    },
+    {
+      "repo_id": "ralph",
+      "repo_url": "https://github.com/snarktank/ralph",
+      "primary_arena": "autonomous-completion-loop",
+      "secondary_arenas": ["workspace-orchestration", "coding-craft"],
+      "repo_findings": [
+        {
+          "field": "runtime_model",
+          "value": "fresh-instance loop with persistent git/progress/prd memory",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/snarktank/ralph/main/README.md",
+              "note": "README explains each iteration is a fresh AI instance and persistence is through git, progress.txt, and prd.json."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "prd-skill",
+          "asset_path": "skills/prd/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "files_generated",
+              "value": ["tasks/prd-[feature-name].md"],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/snarktank/ralph/main/skills/prd/SKILL.md",
+                  "note": "Output path is explicit."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 77,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 12,
+              "verification_explicitness": 8,
+              "guardrail_strength": 8,
+              "context_discipline": 4,
+              "codex_fit": 4,
+              "composability": 6,
+              "packaging_operational_fit": 9,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 8
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "workspace-orchestration",
+          "candidate_score_total": 18,
+          "breakdown": {
+            "domain_fit": 3,
+            "codex_setup_fit": 2,
+            "representative_asset_quality": 3,
+            "verification_guardrails": 4,
+            "operational_burden": 2,
+            "depth_differentiation": 4
+          },
+          "install_label": "project-scoped"
+        }
+      ]
+    },
+    {
+      "repo_id": "mattpocock-skills",
+      "repo_url": "https://github.com/mattpocock/skills",
+      "primary_arena": "coding-craft",
+      "secondary_arenas": ["workspace-orchestration", "frontend-design-craft"],
+      "repo_findings": [
+        {
+          "field": "distribution_model",
+          "value": "portable skills CLI installs",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/mattpocock/skills/main/README.md",
+              "note": "README repeatedly uses npx skills add for individual skills."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "tdd",
+          "asset_path": "tdd/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "workflow_shape",
+              "value": "vertical red-green-refactor slices",
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/mattpocock/skills/main/tdd/SKILL.md",
+                  "note": "Skill explicitly forbids horizontal slicing and enforces one test -> one implementation."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 76,
+            "category_points": {
+              "trigger_clarity": 6,
+              "workflow_explicitness": 10,
+              "verification_explicitness": 8,
+              "guardrail_strength": 8,
+              "context_discipline": 4,
+              "codex_fit": 8,
+              "composability": 8,
+              "packaging_operational_fit": 9,
+              "artifact_value_clarity": 7,
+              "maintenance_evidence": 8
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "coding-craft",
+          "candidate_score_total": 21,
+          "breakdown": {
+            "domain_fit": 4,
+            "codex_setup_fit": 3,
+            "representative_asset_quality": 3,
+            "verification_guardrails": 3,
+            "operational_burden": 4,
+            "depth_differentiation": 4
+          },
+          "install_label": "project-scoped"
+        }
+      ]
+    },
+    {
+      "repo_id": "marketingskills",
+      "repo_url": "https://github.com/coreyhaines31/marketingskills",
+      "primary_arena": "marketing-system",
+      "secondary_arenas": ["writing-and-voice"],
+      "repo_findings": [
+        {
+          "field": "codex_support",
+          "value": "explicit",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/README.md",
+              "note": "README explicitly says it works with OpenAI Codex."
+            }
+          ]
+        },
+        {
+          "field": "shared_context_architecture",
+          "value": "present",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/README.md",
+              "note": "README says product-marketing-context is the foundation and all other skills check it first."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "product-marketing-context",
+          "asset_path": "skills/product-marketing-context/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "files_generated",
+              "value": [".agents/product-marketing-context.md"],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/product-marketing-context/SKILL.md",
+                  "note": "Skill explicitly creates and updates the shared context file."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 92,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 12,
+              "verification_explicitness": 10,
+              "guardrail_strength": 8,
+              "context_discipline": 8,
+              "codex_fit": 12,
+              "composability": 8,
+              "packaging_operational_fit": 9,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 7
+            }
+          }
+        },
+        {
+          "asset_id": "page-cro",
+          "asset_path": "skills/page-cro/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "analysis_framework",
+              "value": "explicit ordered CRO framework",
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/coreyhaines31/marketingskills/main/skills/page-cro/SKILL.md",
+                  "note": "Skill defines analysis dimensions in order of impact and a fixed output format."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 86,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 10,
+              "verification_explicitness": 7,
+              "guardrail_strength": 6,
+              "context_discipline": 8,
+              "codex_fit": 12,
+              "composability": 8,
+              "packaging_operational_fit": 9,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 8
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "marketing-system",
+          "candidate_score_total": 22,
+          "breakdown": {
+            "domain_fit": 4,
+            "codex_setup_fit": 4,
+            "representative_asset_quality": 4,
+            "verification_guardrails": 3,
+            "operational_burden": 3,
+            "depth_differentiation": 4
+          },
+          "install_label": "default-install"
+        }
+      ]
+    },
+    {
+      "repo_id": "inside-lago-voice-skill",
+      "repo_url": "https://github.com/getlago/inside-lago-voice-skill",
+      "primary_arena": "writing-and-voice",
+      "secondary_arenas": [],
+      "repo_findings": [
+        {
+          "field": "template_nature",
+          "value": "published framework/template rather than plug-and-play calibrated skill",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://github.com/getlago/inside-lago-voice-skill",
+              "note": "README says the original skill would not help directly because it is calibrated to the author and shares the structure instead."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "skill-template-readme",
+          "asset_path": "README.md + SKILL-TEMPLATE.md categories",
+          "kind": "template-framework",
+          "asset_findings": [
+            {
+              "field": "sections",
+              "value": [
+                "Voice",
+                "Core Rules",
+                "Anti-Filler Checklist",
+                "Audience Adaptation",
+                "Channel-Specific Notes",
+                "Drafted vs Sent",
+                "Company Context"
+              ],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://github.com/getlago/inside-lago-voice-skill",
+                  "note": "README enumerates the seven template sections."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 75,
+            "category_points": {
+              "trigger_clarity": 6,
+              "workflow_explicitness": 8,
+              "verification_explicitness": 6,
+              "guardrail_strength": 6,
+              "context_discipline": 8,
+              "codex_fit": 4,
+              "composability": 8,
+              "packaging_operational_fit": 7,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 10
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "writing-and-voice",
+          "candidate_score_total": 19,
+          "breakdown": {
+            "domain_fit": 4,
+            "codex_setup_fit": 2,
+            "representative_asset_quality": 3,
+            "verification_guardrails": 3,
+            "operational_burden": 3,
+            "depth_differentiation": 4
+          },
+          "install_label": "project-scoped"
+        }
+      ]
+    },
+    {
+      "repo_id": "taste-skill",
+      "repo_url": "https://github.com/Leonxlnx/taste-skill",
+      "primary_arena": "frontend-design-craft",
+      "secondary_arenas": [],
+      "repo_findings": [
+        {
+          "field": "codex_support",
+          "value": "explicit",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/README.md",
+              "note": "README explicitly lists Codex as supported and offers portable install methods."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "taste-skill",
+          "asset_path": "skills/taste-skill/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "parameterization",
+              "value": ["DESIGN_VARIANCE", "MOTION_INTENSITY", "VISUAL_DENSITY"],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/taste-skill/SKILL.md",
+                  "note": "Three top-level design dials are explicit and central."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 87,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 8,
+              "verification_explicitness": 5,
+              "guardrail_strength": 12,
+              "context_discipline": 4,
+              "codex_fit": 12,
+              "composability": 8,
+              "packaging_operational_fit": 10,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 10
+            }
+          }
+        },
+        {
+          "asset_id": "redesign-skill",
+          "asset_path": "skills/redesign-skill/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "workflow_shape",
+              "value": ["Scan", "Diagnose", "Fix"],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/Leonxlnx/taste-skill/main/skills/redesign-skill/SKILL.md",
+                  "note": "Redesign sequence is explicit."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 88,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 10,
+              "verification_explicitness": 6,
+              "guardrail_strength": 10,
+              "context_discipline": 4,
+              "codex_fit": 12,
+              "composability": 8,
+              "packaging_operational_fit": 10,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 10
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "frontend-design-craft",
+          "candidate_score_total": 23,
+          "breakdown": {
+            "domain_fit": 4,
+            "codex_setup_fit": 4,
+            "representative_asset_quality": 4,
+            "verification_guardrails": 3,
+            "operational_burden": 4,
+            "depth_differentiation": 4
+          },
+          "install_label": "project-scoped"
+        }
+      ]
+    },
+    {
+      "repo_id": "impeccable",
+      "repo_url": "https://github.com/pbakaus/impeccable",
+      "primary_arena": "frontend-design-craft",
+      "secondary_arenas": ["meta-skillcraft"],
+      "repo_findings": [
+        {
+          "field": "codex_support",
+          "value": "explicit",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://github.com/pbakaus/impeccable",
+              "note": "README includes Codex CLI installation instructions and codex dist output."
+            }
+          ]
+        },
+        {
+          "field": "provider_build_architecture",
+          "value": "single source transformed to provider-specific outputs",
+          "evidence_type": "E",
+          "basis": [
+            {
+              "source": "https://raw.githubusercontent.com/pbakaus/impeccable/main/AGENTS.md",
+              "note": "AGENTS.md explains the source/dist/transformer architecture."
+            }
+          ]
+        }
+      ],
+      "representative_assets": [
+        {
+          "asset_id": "impeccable",
+          "asset_path": "source/skills/impeccable/SKILL.md",
+          "kind": "skill",
+          "asset_findings": [
+            {
+              "field": "required_context_files",
+              "value": ["PRODUCT.md", "DESIGN.md"],
+              "evidence_type": "E",
+              "basis": [
+                {
+                  "source": "https://raw.githubusercontent.com/pbakaus/impeccable/main/source/skills/impeccable/SKILL.md",
+                  "note": "Skill setup explicitly requires PRODUCT.md and strongly recommends DESIGN.md."
+                }
+              ]
+            }
+          ],
+          "static_score": {
+            "total": 93,
+            "category_points": {
+              "trigger_clarity": 8,
+              "workflow_explicitness": 10,
+              "verification_explicitness": 8,
+              "guardrail_strength": 12,
+              "context_discipline": 8,
+              "codex_fit": 12,
+              "composability": 8,
+              "packaging_operational_fit": 9,
+              "artifact_value_clarity": 10,
+              "maintenance_evidence": 8
+            }
+          }
+        }
+      ],
+      "arena_scores": [
+        {
+          "arena": "frontend-design-craft",
+          "candidate_score_total": 23,
+          "breakdown": {
+            "domain_fit": 4,
+            "codex_setup_fit": 4,
+            "representative_asset_quality": 4,
+            "verification_guardrails": 4,
+            "operational_burden": 3,
+            "depth_differentiation": 4
+          },
+          "install_label": "default-install"
+        }
+      ]
+    }
+  ]
+}

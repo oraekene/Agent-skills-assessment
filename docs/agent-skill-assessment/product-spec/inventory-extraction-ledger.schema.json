@@ -1,0 +1,119 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Inventory And Extraction Ledger",
+  "type": "object",
+  "required": ["version", "sources", "packages", "skill_units", "inventory_records", "extraction_records"],
+  "properties": {
+    "version": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "packages": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/package" }
+    },
+    "skill_units": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/skillUnit" }
+    },
+    "inventory_records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/inventoryRecord" }
+    },
+    "extraction_records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/extractionRecord" }
+    }
+  },
+  "$defs": {
+    "source": {
+      "type": "object",
+      "required": ["source_id", "source_name", "source_type", "origin_url", "source_tags"],
+      "properties": {
+        "source_id": { "type": "string" },
+        "source_name": { "type": "string" },
+        "source_type": { "type": "string" },
+        "origin_url": { "type": "string" },
+        "source_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "package": {
+      "type": "object",
+      "required": ["package_id", "source_id", "package_name", "install_surface", "package_status"],
+      "properties": {
+        "package_id": { "type": "string" },
+        "source_id": { "type": "string" },
+        "package_name": { "type": "string" },
+        "install_surface": { "type": "string" },
+        "package_status": { "type": "string" }
+      }
+    },
+    "skillUnit": {
+      "type": "object",
+      "required": [
+        "unit_id",
+        "package_id",
+        "unit_type",
+        "display_name",
+        "path",
+        "source_of_truth",
+        "is_generated_duplicate"
+      ],
+      "properties": {
+        "unit_id": { "type": "string" },
+        "package_id": { "type": "string" },
+        "unit_type": { "type": "string" },
+        "display_name": { "type": "string" },
+        "path": { "type": "string" },
+        "source_of_truth": {
+          "oneOf": [
+            { "type": "boolean" },
+            { "type": "string", "enum": ["unknown"] }
+          ]
+        },
+        "is_generated_duplicate": { "type": "boolean" },
+        "installability_state": { "type": "string" },
+        "description": { "type": "string" }
+      }
+    },
+    "inventoryRecord": {
+      "type": "object",
+      "required": ["inventory_id", "source_id", "relevant_file_count", "flagship_candidates"],
+      "properties": {
+        "inventory_id": { "type": "string" },
+        "source_id": { "type": "string" },
+        "relevant_file_count": { "type": "integer" },
+        "relevant_file_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "flagship_candidates": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "generated_duplicate_groups": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "extractionRecord": {
+      "type": "object",
+      "required": ["extraction_id", "unit_id", "input_paths", "extraction_reason"],
+      "properties": {
+        "extraction_id": { "type": "string" },
+        "unit_id": { "type": "string" },
+        "input_paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "extraction_reason": { "type": "string" },
+        "unit_boundary_notes": { "type": "string" }
+      }
+    }
+  }
+}

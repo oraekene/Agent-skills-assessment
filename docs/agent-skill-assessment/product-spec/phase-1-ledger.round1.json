@@ -1,0 +1,130 @@
+{
+  "version": "phase1-round1",
+  "sources": [
+    {
+      "source_id": "src-oh-my-codex",
+      "source_name": "oh-my-codex",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/Yeachan-Heo/oh-my-codex",
+      "source_tags": ["source:oh-my-codex", "source-family:omx"]
+    },
+    {
+      "source_id": "src-superpowers",
+      "source_name": "superpowers",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/obra/superpowers",
+      "source_tags": ["source:superpowers", "source-family:obra"]
+    },
+    {
+      "source_id": "src-claude-agents",
+      "source_name": "claude-agents",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/iannuttall/claude-agents",
+      "source_tags": ["source:claude-agents", "source-family:iannuttall"]
+    },
+    {
+      "source_id": "src-ralph",
+      "source_name": "ralph",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/snarktank/ralph",
+      "source_tags": ["source:ralph", "source-family:snarktank"]
+    },
+    {
+      "source_id": "src-mattpocock-skills",
+      "source_name": "mattpocock/skills",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/mattpocock/skills",
+      "source_tags": ["source:mattpocock-skills", "source-family:mattpocock"]
+    },
+    {
+      "source_id": "src-marketingskills",
+      "source_name": "marketingskills",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/coreyhaines31/marketingskills",
+      "source_tags": ["source:marketingskills", "source-family:coreyhaines31"]
+    },
+    {
+      "source_id": "src-inside-lago-voice-skill",
+      "source_name": "inside-lago-voice-skill",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/getlago/inside-lago-voice-skill",
+      "source_tags": ["source:inside-lago-voice-skill", "source-family:getlago"]
+    },
+    {
+      "source_id": "src-taste-skill",
+      "source_name": "taste-skill",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/Leonxlnx/taste-skill",
+      "source_tags": ["source:taste-skill", "source-family:leonxlnx"]
+    },
+    {
+      "source_id": "src-impeccable",
+      "source_name": "impeccable",
+      "source_type": "github-repo",
+      "origin_url": "https://github.com/pbakaus/impeccable",
+      "source_tags": ["source:impeccable", "source-family:pbakaus"]
+    }
+  ],
+  "packages": [
+    { "package_id": "pkg-oh-my-codex-main", "source_id": "src-oh-my-codex", "package_name": "oh-my-codex main package", "install_surface": "repo-level codex package", "package_status": "single-package-default" },
+    { "package_id": "pkg-superpowers-main", "source_id": "src-superpowers", "package_name": "superpowers main package", "install_surface": "repo-level skills package", "package_status": "single-package-default" },
+    { "package_id": "pkg-claude-agents-main", "source_id": "src-claude-agents", "package_name": "claude-agents main package", "install_surface": "repo-level agents package", "package_status": "single-package-default" },
+    { "package_id": "pkg-ralph-main", "source_id": "src-ralph", "package_name": "ralph main package", "install_surface": "repo-level workflow package", "package_status": "single-package-default" },
+    { "package_id": "pkg-mattpocock-main", "source_id": "src-mattpocock-skills", "package_name": "mattpocock skills package", "install_surface": "repo-level skills package", "package_status": "single-package-default" },
+    { "package_id": "pkg-marketing-main", "source_id": "src-marketingskills", "package_name": "marketingskills main package", "install_surface": "repo-level skills package", "package_status": "single-package-default" },
+    { "package_id": "pkg-lago-voice-main", "source_id": "src-inside-lago-voice-skill", "package_name": "inside-lago voice template package", "install_surface": "repo-level template package", "package_status": "single-package-default" },
+    { "package_id": "pkg-taste-main", "source_id": "src-taste-skill", "package_name": "taste-skill main package", "install_surface": "repo-level skills package", "package_status": "single-package-default" },
+    { "package_id": "pkg-impeccable-main", "source_id": "src-impeccable", "package_name": "impeccable main package", "install_surface": "repo-level multi-output package", "package_status": "single-package-default" }
+  ],
+  "skill_units": [
+    { "unit_id": "unit-oh-my-codex-agents", "package_id": "pkg-oh-my-codex-main", "unit_type": "agents-contract", "display_name": "oh-my-codex AGENTS", "path": "AGENTS.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Global OMX runtime contract." },
+    { "unit_id": "unit-oh-my-codex-deep-interview", "package_id": "pkg-oh-my-codex-main", "unit_type": "skill", "display_name": "deep-interview", "path": "skills/deep-interview/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Clarification workflow skill." },
+
+    { "unit_id": "unit-superpowers-brainstorming", "package_id": "pkg-superpowers-main", "unit_type": "skill", "display_name": "brainstorming", "path": "skills/brainstorming/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Design-first specification workflow." },
+    { "unit_id": "unit-superpowers-tdd", "package_id": "pkg-superpowers-main", "unit_type": "skill", "display_name": "test-driven-development", "path": "skills/test-driven-development/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Strict TDD implementation skill." },
+
+    { "unit_id": "unit-claude-agents-content-writer", "package_id": "pkg-claude-agents-main", "unit_type": "agent", "display_name": "content-writer", "path": "agents/content-writer.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Content writing specialist agent." },
+
+    { "unit_id": "unit-ralph-prd", "package_id": "pkg-ralph-main", "unit_type": "skill", "display_name": "prd", "path": "skills/prd/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "PRD creation skill for Ralph loop." },
+
+    { "unit_id": "unit-mattpocock-tdd", "package_id": "pkg-mattpocock-main", "unit_type": "skill", "display_name": "tdd", "path": "tdd/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Vertical-slice TDD skill." },
+
+    { "unit_id": "unit-marketing-product-context", "package_id": "pkg-marketing-main", "unit_type": "skill", "display_name": "product-marketing-context", "path": "skills/product-marketing-context/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Shared marketing context skill." },
+    { "unit_id": "unit-marketing-page-cro", "package_id": "pkg-marketing-main", "unit_type": "skill", "display_name": "page-cro", "path": "skills/page-cro/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Landing-page CRO audit skill." },
+
+    { "unit_id": "unit-lago-voice-template", "package_id": "pkg-lago-voice-main", "unit_type": "template", "display_name": "inside-lago voice template", "path": "README.md + template structure", "source_of_truth": "unknown", "is_generated_duplicate": false, "installability_state": "adapt-first", "description": "Voice calibration template framework." },
+
+    { "unit_id": "unit-taste-main", "package_id": "pkg-taste-main", "unit_type": "skill", "display_name": "taste-skill", "path": "skills/taste-skill/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Primary taste and visual direction skill." },
+    { "unit_id": "unit-taste-redesign", "package_id": "pkg-taste-main", "unit_type": "skill", "display_name": "redesign-skill", "path": "skills/redesign-skill/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Structured redesign skill." },
+
+    { "unit_id": "unit-impeccable-main", "package_id": "pkg-impeccable-main", "unit_type": "skill", "display_name": "impeccable", "path": "source/skills/impeccable/SKILL.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "install-relevant", "description": "Primary impeccable design skill." },
+    { "unit_id": "unit-impeccable-agents", "package_id": "pkg-impeccable-main", "unit_type": "agents-contract", "display_name": "impeccable AGENTS", "path": "AGENTS.md", "source_of_truth": true, "is_generated_duplicate": false, "installability_state": "maintainer-relevant", "description": "Source/dist transform architecture contract." }
+  ],
+  "inventory_records": [
+    { "inventory_id": "inv-oh-my-codex", "source_id": "src-oh-my-codex", "relevant_file_count": 2, "relevant_file_types": ["SKILL.md", "AGENTS.md"], "flagship_candidates": ["AGENTS.md", "skills/deep-interview/SKILL.md"], "generated_duplicate_groups": [] },
+    { "inventory_id": "inv-superpowers", "source_id": "src-superpowers", "relevant_file_count": 2, "relevant_file_types": ["SKILL.md"], "flagship_candidates": ["skills/brainstorming/SKILL.md", "skills/test-driven-development/SKILL.md"], "generated_duplicate_groups": [] },
+    { "inventory_id": "inv-claude-agents", "source_id": "src-claude-agents", "relevant_file_count": 1, "relevant_file_types": ["agent-file"], "flagship_candidates": ["agents/content-writer.md"], "generated_duplicate_groups": [] },
+    { "inventory_id": "inv-ralph", "source_id": "src-ralph", "relevant_file_count": 1, "relevant_file_types": ["SKILL.md"], "flagship_candidates": ["skills/prd/SKILL.md"], "generated_duplicate_groups": [] },
+    { "inventory_id": "inv-mattpocock", "source_id": "src-mattpocock-skills", "relevant_file_count": 1, "relevant_file_types": ["SKILL.md"], "flagship_candidates": ["tdd/SKILL.md"], "generated_duplicate_groups": [] },
+    { "inventory_id": "inv-marketingskills", "source_id": "src-marketingskills", "relevant_file_count": 2, "relevant_file_types": ["SKILL.md"], "flagship_candidates": ["skills/product-marketing-context/SKILL.md", "skills/page-cro/SKILL.md"], "generated_duplicate_groups": [] },
+    { "inventory_id": "inv-lago-voice", "source_id": "src-inside-lago-voice-skill", "relevant_file_count": 1, "relevant_file_types": ["template-readme"], "flagship_candidates": ["README.md template structure"], "generated_duplicate_groups": [] },
+    { "inventory_id": "inv-taste", "source_id": "src-taste-skill", "relevant_file_count": 2, "relevant_file_types": ["SKILL.md"], "flagship_candidates": ["skills/taste-skill/SKILL.md", "skills/redesign-skill/SKILL.md"], "generated_duplicate_groups": [] },
+    { "inventory_id": "inv-impeccable", "source_id": "src-impeccable", "relevant_file_count": 2, "relevant_file_types": ["SKILL.md", "AGENTS.md"], "flagship_candidates": ["source/skills/impeccable/SKILL.md", "AGENTS.md"], "generated_duplicate_groups": ["dist provider outputs derive from source/"] }
+  ],
+  "extraction_records": [
+    { "extraction_id": "ext-oh-my-codex-agents", "unit_id": "unit-oh-my-codex-agents", "input_paths": ["AGENTS.md"], "extraction_reason": "global-runtime-contract", "unit_boundary_notes": "Global session contract extracted because it materially shapes runtime behavior." },
+    { "extraction_id": "ext-oh-my-codex-deep-interview", "unit_id": "unit-oh-my-codex-deep-interview", "input_paths": ["skills/deep-interview/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Single self-contained skill." },
+    { "extraction_id": "ext-superpowers-brainstorming", "unit_id": "unit-superpowers-brainstorming", "input_paths": ["skills/brainstorming/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Single flagship workflow skill." },
+    { "extraction_id": "ext-superpowers-tdd", "unit_id": "unit-superpowers-tdd", "input_paths": ["skills/test-driven-development/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Single flagship coding skill." },
+    { "extraction_id": "ext-claude-agents-content-writer", "unit_id": "unit-claude-agents-content-writer", "input_paths": ["agents/content-writer.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Distinct specialist agent file." },
+    { "extraction_id": "ext-ralph-prd", "unit_id": "unit-ralph-prd", "input_paths": ["skills/prd/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Distinct PRD skill within broader loop system." },
+    { "extraction_id": "ext-mattpocock-tdd", "unit_id": "unit-mattpocock-tdd", "input_paths": ["tdd/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Single self-contained skill." },
+    { "extraction_id": "ext-marketing-product-context", "unit_id": "unit-marketing-product-context", "input_paths": ["skills/product-marketing-context/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Foundation marketing skill and explicit artifact producer." },
+    { "extraction_id": "ext-marketing-page-cro", "unit_id": "unit-marketing-page-cro", "input_paths": ["skills/page-cro/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Distinct downstream CRO skill." },
+    { "extraction_id": "ext-lago-voice-template", "unit_id": "unit-lago-voice-template", "input_paths": ["README.md", "template structure"], "extraction_reason": "template-primary-value", "unit_boundary_notes": "Primary value is reusable framework rather than a turnkey calibrated skill." },
+    { "extraction_id": "ext-taste-main", "unit_id": "unit-taste-main", "input_paths": ["skills/taste-skill/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Primary design skill." },
+    { "extraction_id": "ext-taste-redesign", "unit_id": "unit-taste-redesign", "input_paths": ["skills/redesign-skill/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Distinct redesign workflow skill." },
+    { "extraction_id": "ext-impeccable-main", "unit_id": "unit-impeccable-main", "input_paths": ["source/skills/impeccable/SKILL.md"], "extraction_reason": "direct-user-unit", "unit_boundary_notes": "Primary user-facing source-of-truth skill." },
+    { "extraction_id": "ext-impeccable-agents", "unit_id": "unit-impeccable-agents", "input_paths": ["AGENTS.md"], "extraction_reason": "global-runtime-contract", "unit_boundary_notes": "Maintainer/runtime architecture contract extracted because it materially shapes package behavior." }
+  ]
+}
