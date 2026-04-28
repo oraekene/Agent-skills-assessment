@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Security Review Ledger",
+  "type": "object",
+  "required": [
+    "version",
+    "review_runs",
+    "findings",
+    "results"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "review_runs": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "findings": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "results": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  },
+  "additionalProperties": false
+}
