@@ -152,6 +152,10 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - summary of Phase 8 security review outputs
 
+`end-to-end-master-simulation.md`
+
+- one complete real-usecase walkthrough tying every phase together
+
 `roadmap.md`
 
 - phased delivery plan from current toolkit to future directory
@@ -295,4 +299,5 @@ The product is designed `internal-first`, but with a data model and subsystem la
 27. `phase-7-results.md`
 28. `phase-8-security-review-layer.md`
 29. `phase-8-results.md`
-30. `roadmap.md`
+30. `end-to-end-master-simulation.md`
+31. `roadmap.md`
