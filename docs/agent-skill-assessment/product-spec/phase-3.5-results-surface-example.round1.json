@@ -1,0 +1,92 @@
+{
+  "version": "phase-3.5-round1",
+  "band_groups": [
+    {
+      "surface_id": "domain-design-ux",
+      "domain": "design-and-ux",
+      "bands": [
+        {
+          "band": "80-94",
+          "units": [
+            {
+              "unit_id": "unit-impeccable-main",
+              "display_name": "impeccable",
+              "short_explanation": "Strongest current design-audit and polish candidate for Codex-oriented UI improvement work."
+            }
+          ]
+        },
+        {
+          "band": "70-79",
+          "units": [
+            {
+              "unit_id": "unit-taste-redesign",
+              "display_name": "taste-redesign",
+              "short_explanation": "Strong redesign taste steering with less overall rigor than impeccable."
+            },
+            {
+              "unit_id": "unit-taste-main",
+              "display_name": "taste-skill",
+              "short_explanation": "Useful style pressure and anti-generic guidance, but broader and less targeted."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "shortlists": [
+    {
+      "shortlist_id": "task-dashboard-audit",
+      "query": "Audit and improve this SaaS dashboard settings page.",
+      "units": [
+        {
+          "unit_id": "unit-impeccable-main",
+          "rank": 1,
+          "why_matched": "Primary design-and-ux fit with strong audit and improvement orientation.",
+          "why_ranked_here": "Best balance of structural quality, Codex fit, and design-craft specificity.",
+          "missing_evidence": "No live benchmark trace yet."
+        },
+        {
+          "unit_id": "unit-taste-redesign",
+          "rank": 2,
+          "why_matched": "High redesign relevance for SaaS UI improvement tasks.",
+          "why_ranked_here": "Strong design taste guidance but less complete operational structure.",
+          "missing_evidence": "No live benchmark trace yet."
+        },
+        {
+          "unit_id": "unit-taste-main",
+          "rank": 3,
+          "why_matched": "General design taste pressure applies to dashboard refinement.",
+          "why_ranked_here": "Broader fit and lower precision than the top two candidates.",
+          "missing_evidence": "No live benchmark trace yet."
+        }
+      ]
+    }
+  ],
+  "skill_details": [
+    {
+      "unit_id": "unit-taste-redesign",
+      "score_band": "70-79",
+      "collapsed_summary": "Focused redesign skill with strong visual taste pressure.",
+      "expanded": {
+        "taxonomy": {
+          "primary_domain": "design-and-ux"
+        },
+        "runtime_note": "Codex-compatible as a user-installed skill unit.",
+        "benchmark_state": "not-run",
+        "unknown_share": 0.18
+      }
+    }
+  ],
+  "better_alternatives": [
+    {
+      "viewed_unit_id": "unit-taste-redesign",
+      "compatible_slice": "design-and-ux + redesign/improve + codex",
+      "alternatives": [
+        {
+          "unit_id": "unit-impeccable-main",
+          "reason": "Higher total score with stronger structural rigor and better overall design-audit fit."
+        }
+      ]
+    }
+  ]
+}

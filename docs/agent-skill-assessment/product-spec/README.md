@@ -82,6 +82,22 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - summary of the runtime subsystem and what it changes
 
+`phase-3-runtime-workflow-simulation.md`
+
+- complete worked simulation of runtime discovery and progressive loading
+
+`phase-3-results.md`
+
+- summary of Phase 3 runtime simulation outputs
+
+`phase-3.5-internal-results-surface.md`
+
+- internal grouped-band, shortlist, detail, and better-alternative result rules
+
+`phase-3.5-results.md`
+
+- summary of Phase 3.5 result-surface outputs
+
 `retrieval-and-ranking.md`
 
 - domain browse
@@ -144,6 +160,22 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - schema for runtime discovery and management APIs
 
+`phase-3-runtime-index-example.round1.json`
+
+- first machine-readable example runtime skill index
+
+`phase-3-runtime-api-examples.round1.json`
+
+- first machine-readable example runtime API responses
+
+`internal-results-surface.schema.json`
+
+- schema for internal result-surface objects
+
+`phase-3.5-results-surface-example.round1.json`
+
+- first machine-readable example results surface
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -159,6 +191,10 @@ The product is designed `internal-first`, but with a data model and subsystem la
 11. `phase-2.5-results.md`
 12. `runtime-skill-discovery-and-progressive-loading.md`
 13. `runtime-skill-discovery-results.md`
-14. `retrieval-and-ranking.md`
-15. `benchmarking-subsystem.md`
-16. `roadmap.md`
+14. `phase-3-runtime-workflow-simulation.md`
+15. `phase-3-results.md`
+16. `phase-3.5-internal-results-surface.md`
+17. `phase-3.5-results.md`
+18. `retrieval-and-ranking.md`
+19. `benchmarking-subsystem.md`
+20. `roadmap.md`

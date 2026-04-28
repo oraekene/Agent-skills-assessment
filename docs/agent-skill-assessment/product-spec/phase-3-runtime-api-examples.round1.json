@@ -1,0 +1,80 @@
+{
+  "version": "phase-3-round1",
+  "endpoints": [
+    {
+      "name": "skills_list",
+      "request": {
+        "active_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\apps\\dashboard\\src\\pages\\Settings.tsx"
+      },
+      "response": {
+        "visible_skills": [
+          {
+            "name": "dashboard-ui-audit",
+            "precedence_rank": 1,
+            "eligibility_state": "eligible"
+          },
+          {
+            "name": "frontend-standards",
+            "precedence_rank": 2,
+            "eligibility_state": "eligible"
+          },
+          {
+            "name": "impeccable",
+            "precedence_rank": 3,
+            "eligibility_state": "eligible-with-warning"
+          },
+          {
+            "name": "taste-redesign",
+            "precedence_rank": 3,
+            "eligibility_state": "eligible"
+          },
+          {
+            "name": "figma-to-ui",
+            "precedence_rank": 3,
+            "eligibility_state": "blocked-missing-bin"
+          }
+        ]
+      }
+    },
+    {
+      "name": "skill_view",
+      "request": {
+        "name": "dashboard-ui-audit"
+      },
+      "response": {
+        "skill_id": "rt-skill-dashboard-ui-audit-local",
+        "eligibility_state": "eligible",
+        "invocation_policy": "user-and-model",
+        "supporting_files_index": [
+          "references/dashboard-checklist.md",
+          "examples/good-audit.md"
+        ]
+      }
+    },
+    {
+      "name": "skill_view(path)",
+      "request": {
+        "name": "dashboard-ui-audit",
+        "path": "references/dashboard-checklist.md"
+      },
+      "response": {
+        "artifact_type": "supporting-file",
+        "loaded_path": "references/dashboard-checklist.md",
+        "load_reason": "audit task requires checklist"
+      }
+    },
+    {
+      "name": "skill_manage",
+      "request": {
+        "action": "patch",
+        "name": "dashboard-ui-audit",
+        "target_root": "rt-root-1"
+      },
+      "response": {
+        "write_scope": "local-writable-root",
+        "mutation_logged": true,
+        "external_roots_modified": false
+      }
+    }
+  ]
+}

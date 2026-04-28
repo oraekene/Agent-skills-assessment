@@ -1,0 +1,231 @@
+{
+  "version": "phase-3-round1",
+  "roots": [
+    {
+      "root_id": "rt-root-1",
+      "scope": "repo-nested",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\apps\\dashboard\\.agents\\skills",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\apps\\dashboard\\.agents\\skills",
+      "writable": true,
+      "precedence_rank": 1
+    },
+    {
+      "root_id": "rt-root-2",
+      "scope": "repo-root",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\.agents\\skills",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\.agents\\skills",
+      "writable": true,
+      "precedence_rank": 2
+    },
+    {
+      "root_id": "rt-root-3",
+      "scope": "user",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\.codex\\skills",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\.codex\\skills",
+      "writable": true,
+      "precedence_rank": 3
+    },
+    {
+      "root_id": "rt-root-4",
+      "scope": "plugin",
+      "lexical_path": "plugin://browser-use/skills/browser",
+      "resolved_path": "plugin://browser-use/skills/browser",
+      "writable": false,
+      "precedence_rank": 4
+    },
+    {
+      "root_id": "rt-root-5",
+      "scope": "external-read-only",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\shared-skills",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\shared-skills",
+      "writable": false,
+      "precedence_rank": 5
+    }
+  ],
+  "skills": [
+    {
+      "skill_id": "rt-skill-dashboard-ui-audit-local",
+      "name": "dashboard-ui-audit",
+      "root_id": "rt-root-1",
+      "scope": "repo-nested",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\apps\\dashboard\\.agents\\skills\\dashboard-ui-audit\\SKILL.md",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\apps\\dashboard\\.agents\\skills\\dashboard-ui-audit\\SKILL.md",
+      "precedence_rank": 1,
+      "shadow_state": "active",
+      "eligibility_state": "eligible",
+      "invocation_policy": "user-and-model",
+      "path_filters": [
+        "apps/dashboard/**"
+      ],
+      "allowed_tools": [
+        "Read",
+        "Grep",
+        "Edit"
+      ],
+      "runtime_requirements": {
+        "dangerous_scan": "clean"
+      },
+      "supporting_files_index": [
+        "references/dashboard-checklist.md",
+        "examples/good-audit.md"
+      ],
+      "static_index_chars": 620
+    },
+    {
+      "skill_id": "rt-skill-frontend-standards",
+      "name": "frontend-standards",
+      "root_id": "rt-root-2",
+      "scope": "repo-root",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\.agents\\skills\\frontend-standards\\SKILL.md",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\OneDrive\\Documents\\New project\\.agents\\skills\\frontend-standards\\SKILL.md",
+      "precedence_rank": 2,
+      "shadow_state": "active",
+      "eligibility_state": "eligible",
+      "invocation_policy": "user-and-model",
+      "path_filters": [
+        "*.tsx"
+      ],
+      "allowed_tools": [
+        "Read",
+        "Edit"
+      ],
+      "runtime_requirements": {
+        "dangerous_scan": "clean"
+      },
+      "supporting_files_index": [],
+      "static_index_chars": 850
+    },
+    {
+      "skill_id": "rt-skill-impeccable",
+      "name": "impeccable",
+      "root_id": "rt-root-3",
+      "scope": "user",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\.codex\\skills\\impeccable\\SKILL.md",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\.codex\\skills\\impeccable\\SKILL.md",
+      "precedence_rank": 3,
+      "shadow_state": "active",
+      "eligibility_state": "eligible-with-warning",
+      "invocation_policy": "user-and-model",
+      "path_filters": [],
+      "allowed_tools": [
+        "Read",
+        "Edit",
+        "Shell"
+      ],
+      "runtime_requirements": {
+        "dangerous_scan": "warning",
+        "required_bins": [
+          "node"
+        ]
+      },
+      "supporting_files_index": [
+        "references/principles.md",
+        "examples/common-fixes.md"
+      ],
+      "static_index_chars": 1320
+    },
+    {
+      "skill_id": "rt-skill-taste-redesign",
+      "name": "taste-redesign",
+      "root_id": "rt-root-3",
+      "scope": "user",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\.codex\\skills\\taste-redesign\\SKILL.md",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\.codex\\skills\\taste-redesign\\SKILL.md",
+      "precedence_rank": 3,
+      "shadow_state": "active",
+      "eligibility_state": "eligible",
+      "invocation_policy": "user-and-model",
+      "path_filters": [],
+      "allowed_tools": [
+        "Read",
+        "Edit"
+      ],
+      "runtime_requirements": {
+        "dangerous_scan": "clean"
+      },
+      "supporting_files_index": [],
+      "static_index_chars": 1180
+    },
+    {
+      "skill_id": "rt-skill-figma-to-ui",
+      "name": "figma-to-ui",
+      "root_id": "rt-root-3",
+      "scope": "user",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\.codex\\skills\\figma-to-ui\\SKILL.md",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\.codex\\skills\\figma-to-ui\\SKILL.md",
+      "precedence_rank": 3,
+      "shadow_state": "active",
+      "eligibility_state": "blocked-missing-bin",
+      "invocation_policy": "user-and-model",
+      "path_filters": [],
+      "allowed_tools": [
+        "Read",
+        "Shell"
+      ],
+      "runtime_requirements": {
+        "dangerous_scan": "clean",
+        "required_bins": [
+          "figma-cli"
+        ],
+        "required_env": [
+          "FIGMA_TOKEN"
+        ],
+        "required_config": [
+          "figma.token"
+        ]
+      },
+      "supporting_files_index": [],
+      "static_index_chars": 980
+    },
+    {
+      "skill_id": "rt-skill-browser-use-browser",
+      "name": "browser-use:browser",
+      "root_id": "rt-root-4",
+      "scope": "plugin",
+      "lexical_path": "plugin://browser-use/skills/browser/SKILL.md",
+      "resolved_path": "plugin://browser-use/skills/browser/SKILL.md",
+      "precedence_rank": 4,
+      "shadow_state": "active",
+      "eligibility_state": "eligible",
+      "invocation_policy": "user-and-model",
+      "path_filters": [],
+      "allowed_tools": [
+        "Browser"
+      ],
+      "runtime_requirements": {
+        "dangerous_scan": "clean",
+        "required_config": [
+          "browser.enabled"
+        ]
+      },
+      "supporting_files_index": [],
+      "static_index_chars": 1640
+    },
+    {
+      "skill_id": "rt-skill-dashboard-ui-audit-external",
+      "name": "dashboard-ui-audit",
+      "root_id": "rt-root-5",
+      "scope": "external-read-only",
+      "lexical_path": "C:\\Users\\IFEANYI-ORAE\\shared-skills\\dashboard-ui-audit\\SKILL.md",
+      "resolved_path": "C:\\Users\\IFEANYI-ORAE\\shared-skills\\dashboard-ui-audit\\SKILL.md",
+      "precedence_rank": 5,
+      "shadow_state": "shadowed",
+      "eligibility_state": "blocked-allowlist",
+      "invocation_policy": "user-and-model",
+      "path_filters": [],
+      "allowed_tools": [
+        "Read"
+      ],
+      "runtime_requirements": {
+        "dangerous_scan": "clean"
+      },
+      "supporting_files_index": [],
+      "static_index_chars": 610
+    }
+  ],
+  "static_budget": {
+    "budget_chars": 8000,
+    "used_chars": 6590,
+    "omitted_skill_count": 0
+  }
+}

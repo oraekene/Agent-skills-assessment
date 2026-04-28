@@ -71,6 +71,24 @@ Success:
 
 - the system can explain not just which skill is best, but which installed skill would actually load and why
 
+## Phase 3.5: Internal Results Surface
+
+Goal:
+
+- define the first human-usable internal presentation layer for ranked skill results
+
+Deliver:
+
+- grouped-band result surfaces
+- task shortlist surfaces
+- per-skill detail surfaces
+- better-alternative logic
+- no-match presentation rules
+
+Success:
+
+- a user can inspect ranked results without needing raw ledgers
+
 ## Phase 4: Benchmark Subsystem
 
 Goal:
