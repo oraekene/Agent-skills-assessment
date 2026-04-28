@@ -74,6 +74,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - summary of deterministic query parsing outputs
 
+`runtime-skill-discovery-and-progressive-loading.md`
+
+- runtime discovery, gating, activation, and progressive loading subsystem
+
+`runtime-skill-discovery-results.md`
+
+- summary of the runtime subsystem and what it changes
+
 `retrieval-and-ranking.md`
 
 - domain browse
@@ -128,6 +136,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - first deterministic parsed-query examples
 
+`runtime-skill-index.schema.json`
+
+- schema for machine-readable runtime-visible skill indexes
+
+`runtime-skill-api.schema.json`
+
+- schema for runtime discovery and management APIs
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -141,6 +157,8 @@ The product is designed `internal-first`, but with a data model and subsystem la
 9. `phase-2-results.md`
 10. `phase-2.5-deterministic-query-parser.md`
 11. `phase-2.5-results.md`
-12. `retrieval-and-ranking.md`
-13. `benchmarking-subsystem.md`
-14. `roadmap.md`
+12. `runtime-skill-discovery-and-progressive-loading.md`
+13. `runtime-skill-discovery-results.md`
+14. `retrieval-and-ranking.md`
+15. `benchmarking-subsystem.md`
+16. `roadmap.md`

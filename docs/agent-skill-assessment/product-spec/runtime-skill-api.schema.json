@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Runtime Skill API",
+  "type": "object",
+  "required": [
+    "version",
+    "endpoints"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "request",
+          "response"
+        ],
+        "properties": {
+          "name": { "type": "string" },
+          "request": { "type": "object" },
+          "response": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Runtime Skill Index",
+  "type": "object",
+  "required": [
+    "version",
+    "roots",
+    "skills",
+    "static_budget"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "roots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "root_id",
+          "scope",
+          "lexical_path",
+          "resolved_path",
+          "writable",
+          "precedence_rank"
+        ],
+        "properties": {
+          "root_id": { "type": "string" },
+          "scope": { "type": "string" },
+          "lexical_path": { "type": "string" },
+          "resolved_path": { "type": "string" },
+          "writable": { "type": "boolean" },
+          "precedence_rank": { "type": "integer" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "skill_id",
+          "name",
+          "root_id",
+          "scope",
+          "lexical_path",
+          "resolved_path",
+          "precedence_rank",
+          "shadow_state",
+          "eligibility_state",
+          "invocation_policy",
+          "static_index_chars"
+        ],
+        "properties": {
+          "skill_id": { "type": "string" },
+          "name": { "type": "string" },
+          "root_id": { "type": "string" },
+          "scope": { "type": "string" },
+          "lexical_path": { "type": "string" },
+          "resolved_path": { "type": "string" },
+          "precedence_rank": { "type": "integer" },
+          "shadow_state": { "type": "string" },
+          "eligibility_state": { "type": "string" },
+          "invocation_policy": { "type": "string" },
+          "path_filters": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "allowed_tools": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "runtime_requirements": {
+            "type": "object"
+          },
+          "supporting_files_index": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "static_index_chars": { "type": "integer" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "static_budget": {
+      "type": "object",
+      "required": [
+        "budget_chars",
+        "used_chars",
+        "omitted_skill_count"
+      ],
+      "properties": {
+        "budget_chars": { "type": "integer" },
+        "used_chars": { "type": "integer" },
+        "omitted_skill_count": { "type": "integer" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

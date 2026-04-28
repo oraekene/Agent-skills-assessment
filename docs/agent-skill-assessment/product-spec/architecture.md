@@ -21,13 +21,14 @@ The primary object is a `SkillUnit`, not a repository.
 
 Repositories are containers and evidence sources.
 
-The system architecture should therefore be organized around five persistent layers:
+The system architecture should therefore be organized around six persistent layers:
 
 1. `source ingestion`
 2. `skill-unit extraction and normalization`
 3. `taxonomy and tagging`
 4. `scoring and ranking`
-5. `presentation and consumption`
+5. `runtime discovery and progressive loading`
+6. `presentation and consumption`
 
 ## Subsystems
 
@@ -169,7 +170,30 @@ Outputs:
 - `BenchmarkDefinition`
 - `BenchmarkResult`
 
-## 7. Presentation Layer
+## 7. Runtime Skill Discovery And Progressive Loading
+
+Purpose:
+
+- make installed skills behave correctly at runtime
+
+Responsibilities:
+
+- discover skill roots from local, nested, plugin, and external directories
+- resolve precedence and shadowing
+- gate skills by environment and safety state
+- build a hard-budget metadata index
+- activate skills explicitly or implicitly
+- progressively load `SKILL.md` and supporting files
+- expose file-backed runtime artifacts
+- preserve activated skills across compaction
+
+Outputs:
+
+- `RuntimeSkillIndex`
+- `RuntimeActivationRecord`
+- `RuntimeSkillArtifactHandle`
+
+## 8. Presentation Layer
 
 Purpose:
 

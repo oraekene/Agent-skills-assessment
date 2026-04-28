@@ -52,7 +52,26 @@ Success:
 
 - user can ask for a task and get a ranked shortlist
 
-## Phase 3: Benchmark Subsystem
+## Phase 3: Runtime Skill Discovery And Progressive Loading
+
+Goal:
+
+- add a real runtime behavior layer distinct from directory ranking
+
+Deliver:
+
+- skill-root discovery rules
+- precedence and shadow handling
+- eligibility gating
+- static skill-index budgeting
+- progressive loading levels
+- runtime inspection and management APIs
+
+Success:
+
+- the system can explain not just which skill is best, but which installed skill would actually load and why
+
+## Phase 4: Benchmark Subsystem
 
 Goal:
 
@@ -70,7 +89,7 @@ Success:
 
 - benchmarks can be defined and stored truthfully even when a runner is blocked
 
-## Phase 4: Self-Maintaining Ingestion
+## Phase 5: Self-Maintaining Ingestion
 
 Goal:
 
@@ -88,7 +107,7 @@ Success:
 
 - the directory can keep itself updated from configured sources
 
-## Phase 5: Public Directory
+## Phase 6: Public Directory
 
 Goal:
 
@@ -106,7 +125,7 @@ Success:
 
 - users can browse and compare skills without seeing raw internals by default
 
-## Phase 6: Chrome Extension
+## Phase 7: Chrome Extension
 
 Goal:
 
@@ -123,7 +142,7 @@ Success:
 
 - users can see ranked context while browsing skills elsewhere
 
-## Phase 7: Security Review Layer
+## Phase 8: Security Review Layer
 
 Goal:
 
