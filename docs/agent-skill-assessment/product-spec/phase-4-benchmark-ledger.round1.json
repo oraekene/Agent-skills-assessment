@@ -1,0 +1,160 @@
+{
+  "version": "phase-4-round1",
+  "definitions": [
+    {
+      "benchmark_id": "bm-design-audit-saas-dashboard-v1",
+      "name": "SaaS Dashboard Design Audit",
+      "benchmark_type": "platform",
+      "target_domains": [
+        "design-and-ux"
+      ],
+      "target_modes": [
+        "audit",
+        "improve"
+      ],
+      "task_prompt": "Audit and improve a SaaS dashboard settings page. Produce an audit summary and proposed UI improvements.",
+      "required_artifacts": [
+        "audit-summary.md",
+        "improvement-plan.md"
+      ],
+      "acceptance_checks": [
+        "artifact:audit-summary.md exists",
+        "artifact:improvement-plan.md exists",
+        "check:identifies usability issues",
+        "check:proposes concrete improvements"
+      ],
+      "runner_type": "simulated-invocation",
+      "runner_requirements": {
+        "requires_runtime": "codex-desktop-compatible prompt simulation"
+      },
+      "scoring_method": "metric-based",
+      "truthfulness_requirements": {
+        "require_trace": true,
+        "require_artifacts": true
+      }
+    },
+    {
+      "benchmark_id": "bm-figma-to-ui-live-v1",
+      "name": "Figma To UI Live Conversion",
+      "benchmark_type": "user-authored",
+      "target_domains": [
+        "design-and-ux"
+      ],
+      "target_modes": [
+        "implement"
+      ],
+      "task_prompt": "Convert the provided Figma frame into working UI.",
+      "required_artifacts": [
+        "implemented-ui"
+      ],
+      "acceptance_checks": [
+        "artifact:implemented-ui exists",
+        "check:runner accessed figma input"
+      ],
+      "runner_type": "live-runner",
+      "runner_requirements": {
+        "required_bins": [
+          "figma-cli"
+        ],
+        "required_env": [
+          "FIGMA_TOKEN"
+        ]
+      },
+      "scoring_method": "metric-based",
+      "truthfulness_requirements": {
+        "require_trace": true,
+        "require_artifacts": true
+      }
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "run-design-audit-impeccable-001",
+      "benchmark_id": "bm-design-audit-saas-dashboard-v1",
+      "unit_id": "unit-impeccable-main",
+      "runner_type": "simulated-invocation",
+      "run_state": "completed",
+      "started_at": "2026-04-28T10:00:00+01:00",
+      "ended_at": "2026-04-28T10:06:00+01:00",
+      "environment_ref": "env-sim-codex-desktop-001"
+    },
+    {
+      "run_id": "run-figma-to-ui-001",
+      "benchmark_id": "bm-figma-to-ui-live-v1",
+      "unit_id": "unit-figma-to-ui",
+      "runner_type": "live-runner",
+      "run_state": "preflight-failed",
+      "started_at": "2026-04-28T10:10:00+01:00",
+      "ended_at": "2026-04-28T10:10:15+01:00",
+      "environment_ref": "env-local-win-001"
+    }
+  ],
+  "traces": [
+    {
+      "trace_id": "trace-design-audit-impeccable-001",
+      "run_id": "run-design-audit-impeccable-001",
+      "trace_handles": [
+        {
+          "type": "file",
+          "ref": ".benchmark-artifacts/run-design-audit-impeccable-001/audit-summary.md"
+        },
+        {
+          "type": "file",
+          "ref": ".benchmark-artifacts/run-design-audit-impeccable-001/improvement-plan.md"
+        },
+        {
+          "type": "log",
+          "ref": ".benchmark-artifacts/run-design-audit-impeccable-001/transcript.log"
+        }
+      ]
+    },
+    {
+      "trace_id": "trace-figma-to-ui-001",
+      "run_id": "run-figma-to-ui-001",
+      "trace_handles": [
+        {
+          "type": "manual-note",
+          "ref": "Preflight failed: missing figma-cli and FIGMA_TOKEN"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "result_id": "result-design-audit-impeccable-001",
+      "run_id": "run-design-audit-impeccable-001",
+      "result_state": "run-succeeded",
+      "scored_metrics": [
+        {
+          "metric_id": "artifact-completeness",
+          "score": 100
+        },
+        {
+          "metric_id": "usability-issue-identification",
+          "score": 75
+        },
+        {
+          "metric_id": "improvement-specificity",
+          "score": 75
+        }
+      ],
+      "missing_requirements": [],
+      "trace_refs": [
+        "trace-design-audit-impeccable-001"
+      ]
+    },
+    {
+      "result_id": "result-figma-to-ui-001",
+      "run_id": "run-figma-to-ui-001",
+      "result_state": "blocked",
+      "scored_metrics": [],
+      "missing_requirements": [
+        "required bin missing: figma-cli",
+        "required env missing: FIGMA_TOKEN"
+      ],
+      "trace_refs": [
+        "trace-figma-to-ui-001"
+      ]
+    }
+  ]
+}

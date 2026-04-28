@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Benchmark Ledger",
+  "type": "object",
+  "required": [
+    "version",
+    "definitions",
+    "runs",
+    "results"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "definitions": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "runs": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "traces": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "results": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  },
+  "additionalProperties": false
+}

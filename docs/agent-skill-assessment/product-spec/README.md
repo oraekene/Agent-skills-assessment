@@ -112,6 +112,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 - user-authored and guided benchmarks
 - result lifecycle
 
+`phase-4-benchmark-operations.md`
+
+- concrete benchmark definition, run, trace, and result rules
+
+`phase-4-results.md`
+
+- summary of Phase 4 benchmark outputs
+
 `roadmap.md`
 
 - phased delivery plan from current toolkit to future directory
@@ -176,6 +184,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - first machine-readable example results surface
 
+`benchmark-ledger.schema.json`
+
+- schema for benchmark ledgers
+
+`phase-4-benchmark-ledger.round1.json`
+
+- first machine-readable benchmark ledger
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -197,4 +213,6 @@ The product is designed `internal-first`, but with a data model and subsystem la
 17. `phase-3.5-results.md`
 18. `retrieval-and-ranking.md`
 19. `benchmarking-subsystem.md`
-20. `roadmap.md`
+20. `phase-4-benchmark-operations.md`
+21. `phase-4-results.md`
+22. `roadmap.md`
