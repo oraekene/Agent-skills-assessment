@@ -58,6 +58,22 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - summary of the first skill-unit ranking outputs
 
+`phase-2-internal-retrieval.md`
+
+- query model and retrieval rules for the first internal discovery engine
+
+`phase-2-results.md`
+
+- summary of the first internal retrieval outputs
+
+`phase-2.5-deterministic-query-parser.md`
+
+- strict query classification and field extraction rules
+
+`phase-2.5-results.md`
+
+- summary of deterministic query parsing outputs
+
 `retrieval-and-ranking.md`
 
 - domain browse
@@ -96,6 +112,22 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - first unit-level taxonomy, tag, and grouped ranking ledger
 
+`query-result-ledger.schema.json`
+
+- schema for machine-readable query/result output
+
+`phase-2-query-examples.round1.json`
+
+- first internal retrieval examples and ranked results
+
+`parsed-query-ledger.schema.json`
+
+- schema for machine-readable parsed query records
+
+`phase-2.5-query-parses.round1.json`
+
+- first deterministic parsed-query examples
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -105,6 +137,10 @@ The product is designed `internal-first`, but with a data model and subsystem la
 5. `phase-1-workflow.md`
 6. `phase-1.5-unit-ranking.md`
 7. `phase-1.5-results.md`
-8. `retrieval-and-ranking.md`
-9. `benchmarking-subsystem.md`
-10. `roadmap.md`
+8. `phase-2-internal-retrieval.md`
+9. `phase-2-results.md`
+10. `phase-2.5-deterministic-query-parser.md`
+11. `phase-2.5-results.md`
+12. `retrieval-and-ranking.md`
+13. `benchmarking-subsystem.md`
+14. `roadmap.md`

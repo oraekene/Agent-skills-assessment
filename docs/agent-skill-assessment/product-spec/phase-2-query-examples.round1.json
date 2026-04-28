@@ -1,0 +1,126 @@
+{
+  "version": "phase2-round1",
+  "queries": [
+    {
+      "query_id": "q-domain-design",
+      "query_type": "domain-browse",
+      "query_text": "Best design and UX skills for Codex Desktop",
+      "target_domains": ["design-and-ux"],
+      "target_modes": [],
+      "required_tags": ["runtime:codex"],
+      "runtime_constraints": ["codex-desktop"],
+      "source_constraints": []
+    },
+    {
+      "query_id": "q-source-taste",
+      "query_type": "source-browse",
+      "query_text": "Show only taste-skill units",
+      "target_domains": [],
+      "target_modes": [],
+      "required_tags": ["source:taste-skill"],
+      "runtime_constraints": [],
+      "source_constraints": ["src-taste-skill"]
+    },
+    {
+      "query_id": "q-task-founder-voice",
+      "query_type": "task-match",
+      "query_text": "Find the best skill for founder-voice launch emails in Codex",
+      "target_domains": ["writing-voice-and-content", "marketing-and-growth"],
+      "target_modes": ["rewrite", "implement", "template"],
+      "required_tags": ["runtime:codex"],
+      "runtime_constraints": ["codex-desktop"],
+      "source_constraints": []
+    },
+    {
+      "query_id": "q-task-design-audit",
+      "query_type": "task-match",
+      "query_text": "Find the best skill for auditing and improving a SaaS dashboard UI",
+      "target_domains": ["design-and-ux"],
+      "target_modes": ["audit", "review", "implement"],
+      "required_tags": [],
+      "runtime_constraints": ["codex-desktop"],
+      "source_constraints": []
+    },
+    {
+      "query_id": "q-compare-tdd",
+      "query_type": "direct-compare",
+      "query_text": "Compare the best TDD skills",
+      "target_domains": ["software-engineering"],
+      "target_modes": ["implement", "verify"],
+      "required_tags": [],
+      "runtime_constraints": ["codex-desktop"],
+      "source_constraints": []
+    }
+  ],
+  "results": [
+    {
+      "result_id": "r-domain-design",
+      "query_id": "q-domain-design",
+      "candidate_ids": ["unit-impeccable-main", "unit-taste-main", "unit-taste-redesign"],
+      "ranked_ids": ["unit-impeccable-main", "unit-taste-redesign", "unit-taste-main"],
+      "grouped_bands": [
+        { "band": "80-94", "unit_ids": ["unit-impeccable-main", "unit-taste-redesign", "unit-taste-main"] }
+      ],
+      "explanations": [
+        { "unit_id": "unit-impeccable-main", "why_matched": "Primary domain is design-and-ux with audit/review/implement modes.", "why_ranked_here": "Highest static and Codex-fit combination in the design set.", "missing_evidence": "No live benchmark result yet." },
+        { "unit_id": "unit-taste-redesign", "why_matched": "Primary domain is design-and-ux and includes audit+implement modes.", "why_ranked_here": "Strong static and Codex-fit scores, slightly behind impeccable on breadth and benchmark readiness.", "missing_evidence": "No live benchmark result yet." },
+        { "unit_id": "unit-taste-main", "why_matched": "Primary domain is design-and-ux and targets frontend polish.", "why_ranked_here": "Strong design score, but slightly less audit-oriented than the top two for this query.", "missing_evidence": "No live benchmark result yet." }
+      ]
+    },
+    {
+      "result_id": "r-source-taste",
+      "query_id": "q-source-taste",
+      "candidate_ids": ["unit-taste-main", "unit-taste-redesign"],
+      "ranked_ids": ["unit-taste-redesign", "unit-taste-main"],
+      "grouped_bands": [
+        { "band": "80-94", "unit_ids": ["unit-taste-redesign", "unit-taste-main"] }
+      ],
+      "explanations": [
+        { "unit_id": "unit-taste-redesign", "why_matched": "Belongs to source:taste-skill.", "why_ranked_here": "Slightly stronger for structured redesign use cases.", "missing_evidence": "No live benchmark result yet." },
+        { "unit_id": "unit-taste-main", "why_matched": "Belongs to source:taste-skill.", "why_ranked_here": "More general taste driver, ranked just behind redesign for source-specific browsing.", "missing_evidence": "No live benchmark result yet." }
+      ]
+    },
+    {
+      "result_id": "r-task-founder-voice",
+      "query_id": "q-task-founder-voice",
+      "candidate_ids": ["unit-lago-voice-template", "unit-marketing-product-context"],
+      "ranked_ids": ["unit-marketing-product-context", "unit-lago-voice-template"],
+      "grouped_bands": [
+        { "band": "80-94", "unit_ids": ["unit-marketing-product-context"] },
+        { "band": "70-79", "unit_ids": ["unit-lago-voice-template"] }
+      ],
+      "explanations": [
+        { "unit_id": "unit-marketing-product-context", "why_matched": "Matches marketing-and-growth plus writing-adjacent needs and has Codex support.", "why_ranked_here": "Best Codex-ready structured candidate for launch-message context building.", "missing_evidence": "Not explicitly a founder-voice specialist." },
+        { "unit_id": "unit-lago-voice-template", "why_matched": "Matches writing/voice and founder-oriented template behavior.", "why_ranked_here": "Best voice-specific fit, but ranked behind on Codex fit and direct installability.", "missing_evidence": "No explicit Codex support and no live benchmark result." }
+      ]
+    },
+    {
+      "result_id": "r-task-design-audit",
+      "query_id": "q-task-design-audit",
+      "candidate_ids": ["unit-impeccable-main", "unit-taste-redesign", "unit-taste-main"],
+      "ranked_ids": ["unit-impeccable-main", "unit-taste-redesign", "unit-taste-main"],
+      "grouped_bands": [
+        { "band": "80-94", "unit_ids": ["unit-impeccable-main", "unit-taste-redesign", "unit-taste-main"] }
+      ],
+      "explanations": [
+        { "unit_id": "unit-impeccable-main", "why_matched": "Matches design-and-ux with explicit audit mode.", "why_ranked_here": "Best audit-oriented design unit for Codex Desktop.", "missing_evidence": "No live benchmark result yet." },
+        { "unit_id": "unit-taste-redesign", "why_matched": "Matches design-and-ux with redesign and audit behavior.", "why_ranked_here": "Strong second choice with narrower redesign emphasis.", "missing_evidence": "No live benchmark result yet." },
+        { "unit_id": "unit-taste-main", "why_matched": "Matches design-and-ux broadly.", "why_ranked_here": "Good general taste enhancer but less explicitly audit-first.", "missing_evidence": "No live benchmark result yet." }
+      ]
+    },
+    {
+      "result_id": "r-compare-tdd",
+      "query_id": "q-compare-tdd",
+      "candidate_ids": ["unit-superpowers-tdd", "unit-mattpocock-tdd"],
+      "ranked_ids": ["unit-superpowers-tdd", "unit-mattpocock-tdd"],
+      "grouped_bands": [
+        { "band": "80-94", "unit_ids": ["unit-superpowers-tdd"] },
+        { "band": "70-79", "unit_ids": ["unit-mattpocock-tdd"] }
+      ],
+      "explanations": [
+        { "unit_id": "unit-superpowers-tdd", "why_matched": "Matches software-engineering with implement+verify modes.", "why_ranked_here": "Higher structural rigor and stronger Codex fit for TDD-first workflows.", "missing_evidence": "No live benchmark result yet." },
+        { "unit_id": "unit-mattpocock-tdd", "why_matched": "Matches software-engineering with implement+verify modes.", "why_ranked_here": "Strong modular TDD unit, but with slightly lower total ranking factors.", "missing_evidence": "No live benchmark result yet." }
+      ]
+    }
+  ]
+}

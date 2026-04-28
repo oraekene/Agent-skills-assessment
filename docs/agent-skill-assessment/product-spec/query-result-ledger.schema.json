@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Query Result Ledger",
+  "type": "object",
+  "required": ["version", "queries", "results"],
+  "properties": {
+    "version": { "type": "string" },
+    "queries": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/query" }
+    },
+    "results": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/result" }
+    }
+  },
+  "$defs": {
+    "query": {
+      "type": "object",
+      "required": ["query_id", "query_type", "query_text"],
+      "properties": {
+        "query_id": { "type": "string" },
+        "query_type": { "type": "string" },
+        "query_text": { "type": "string" },
+        "target_domains": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "target_modes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "required_tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "runtime_constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "source_constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "result": {
+      "type": "object",
+      "required": ["result_id", "query_id", "candidate_ids", "ranked_ids", "explanations"],
+      "properties": {
+        "result_id": { "type": "string" },
+        "query_id": { "type": "string" },
+        "candidate_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "ranked_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "grouped_bands": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["band", "unit_ids"],
+            "properties": {
+              "band": { "type": "string" },
+              "unit_ids": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "explanations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["unit_id", "why_matched", "why_ranked_here", "missing_evidence"],
+            "properties": {
+              "unit_id": { "type": "string" },
+              "why_matched": { "type": "string" },
+              "why_ranked_here": { "type": "string" },
+              "missing_evidence": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

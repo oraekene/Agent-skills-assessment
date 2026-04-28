@@ -1,0 +1,223 @@
+{
+  "version": "phase-2.5-round1",
+  "parsed_queries": [
+    {
+      "query_id": "pq-design-codex",
+      "raw_query": "best design and UX skills for Codex Desktop",
+      "query_type": "domain-browse",
+      "normalized_query": {
+        "target_domains": [
+          "design-and-ux"
+        ],
+        "target_modes": [],
+        "required_tags": [],
+        "preferred_tags": [],
+        "excluded_tags": [],
+        "runtime_constraints": [
+          "codex-desktop"
+        ],
+        "source_constraints": [],
+        "minimum_score_band": null
+      },
+      "field_basis": {
+        "target_domains": [
+          "exact-label:design and ux"
+        ],
+        "runtime_constraints": [
+          "explicit-runtime:codex desktop"
+        ]
+      },
+      "ranking_formula": "broad-query",
+      "candidate_ids": [
+        "unit-impeccable-main",
+        "unit-taste-redesign",
+        "unit-taste-main"
+      ],
+      "ranked_ids": [
+        "unit-impeccable-main",
+        "unit-taste-redesign",
+        "unit-taste-main"
+      ]
+    },
+    {
+      "query_id": "pq-source-taste",
+      "raw_query": "show only taste-skill units",
+      "query_type": "source-browse",
+      "normalized_query": {
+        "target_domains": [],
+        "target_modes": [],
+        "required_tags": [
+          "source:taste-skill"
+        ],
+        "preferred_tags": [],
+        "excluded_tags": [],
+        "runtime_constraints": [],
+        "source_constraints": [
+          "source:taste-skill"
+        ],
+        "minimum_score_band": null
+      },
+      "field_basis": {
+        "source_constraints": [
+          "explicit-source:taste-skill"
+        ],
+        "required_tags": [
+          "explicit-source:taste-skill"
+        ]
+      },
+      "ranking_formula": "broad-query",
+      "candidate_ids": [
+        "unit-taste-redesign",
+        "unit-taste-main"
+      ],
+      "ranked_ids": [
+        "unit-taste-redesign",
+        "unit-taste-main"
+      ]
+    },
+    {
+      "query_id": "pq-founder-voice",
+      "raw_query": "find the best skill for founder-voice launch emails in Codex",
+      "query_type": "task-match",
+      "normalized_query": {
+        "target_domains": [
+          "writing-and-voice",
+          "marketing-and-growth"
+        ],
+        "target_modes": [
+          "generate",
+          "adapt"
+        ],
+        "required_tags": [
+          "task:launch-email",
+          "voice:founder"
+        ],
+        "preferred_tags": [],
+        "excluded_tags": [],
+        "runtime_constraints": [
+          "codex-desktop"
+        ],
+        "source_constraints": [],
+        "minimum_score_band": null
+      },
+      "field_basis": {
+        "target_domains": [
+          "task-phrase-map:founder-voice launch emails -> writing-and-voice",
+          "task-phrase-map:launch emails -> marketing-and-growth"
+        ],
+        "target_modes": [
+          "task-phrase-map:writing -> generate",
+          "task-phrase-map:voice adaptation -> adapt"
+        ],
+        "required_tags": [
+          "task-phrase-map:launch emails -> task:launch-email",
+          "task-phrase-map:founder-voice -> voice:founder"
+        ],
+        "runtime_constraints": [
+          "explicit-runtime:codex"
+        ]
+      },
+      "ranking_formula": "specific-query",
+      "candidate_ids": [
+        "unit-lago-voice-template",
+        "unit-marketing-product-context",
+        "unit-claude-agents-content-writer"
+      ],
+      "ranked_ids": [
+        "unit-marketing-product-context",
+        "unit-lago-voice-template",
+        "unit-claude-agents-content-writer"
+      ]
+    },
+    {
+      "query_id": "pq-dashboard-audit",
+      "raw_query": "find the best skill for auditing and improving a SaaS dashboard UI",
+      "query_type": "task-match",
+      "normalized_query": {
+        "target_domains": [
+          "design-and-ux"
+        ],
+        "target_modes": [
+          "audit",
+          "improve"
+        ],
+        "required_tags": [
+          "task:dashboard-ui",
+          "task:saas"
+        ],
+        "preferred_tags": [],
+        "excluded_tags": [],
+        "runtime_constraints": [],
+        "source_constraints": [],
+        "minimum_score_band": null
+      },
+      "field_basis": {
+        "target_domains": [
+          "task-phrase-map:dashboard ui -> design-and-ux"
+        ],
+        "target_modes": [
+          "task-phrase-map:auditing -> audit",
+          "task-phrase-map:improving -> improve"
+        ],
+        "required_tags": [
+          "task-phrase-map:dashboard -> task:dashboard-ui",
+          "task-phrase-map:saas -> task:saas"
+        ]
+      },
+      "ranking_formula": "specific-query",
+      "candidate_ids": [
+        "unit-impeccable-main",
+        "unit-taste-redesign",
+        "unit-taste-main"
+      ],
+      "ranked_ids": [
+        "unit-impeccable-main",
+        "unit-taste-redesign",
+        "unit-taste-main"
+      ]
+    },
+    {
+      "query_id": "pq-compare-tdd",
+      "raw_query": "compare the best TDD skills",
+      "query_type": "direct-compare",
+      "normalized_query": {
+        "target_domains": [
+          "software-engineering"
+        ],
+        "target_modes": [
+          "implement",
+          "verify"
+        ],
+        "required_tags": [
+          "task:tdd"
+        ],
+        "preferred_tags": [],
+        "excluded_tags": [],
+        "runtime_constraints": [],
+        "source_constraints": [],
+        "minimum_score_band": null
+      },
+      "field_basis": {
+        "target_domains": [
+          "alias-label:tdd -> software-engineering"
+        ],
+        "target_modes": [
+          "task-phrase-map:tdd -> implement",
+          "task-phrase-map:test driven -> verify"
+        ],
+        "required_tags": [
+          "task-phrase-map:tdd -> task:tdd"
+        ]
+      },
+      "ranking_formula": "specific-query",
+      "candidate_ids": [
+        "unit-superpowers-tdd",
+        "unit-mattpocock-tdd"
+      ],
+      "ranked_ids": [
+        "unit-superpowers-tdd",
+        "unit-mattpocock-tdd"
+      ]
+    }
+  ]
+}

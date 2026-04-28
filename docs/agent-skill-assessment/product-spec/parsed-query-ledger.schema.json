@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Phase 2.5 Parsed Query Ledger",
+  "type": "object",
+  "required": [
+    "version",
+    "parsed_queries"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "parsed_queries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "query_id",
+          "raw_query",
+          "query_type",
+          "normalized_query",
+          "field_basis",
+          "ranking_formula",
+          "candidate_ids",
+          "ranked_ids"
+        ],
+        "properties": {
+          "query_id": {
+            "type": "string"
+          },
+          "raw_query": {
+            "type": "string"
+          },
+          "query_type": {
+            "type": "string",
+            "enum": [
+              "domain-browse",
+              "source-browse",
+              "tag-browse",
+              "direct-compare",
+              "task-match"
+            ]
+          },
+          "normalized_query": {
+            "type": "object",
+            "properties": {
+              "target_domains": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "target_modes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "required_tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "preferred_tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "excluded_tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "runtime_constraints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "source_constraints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "minimum_score_band": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          },
+          "field_basis": {
+            "type": "object"
+          },
+          "ranking_formula": {
+            "type": "string",
+            "enum": [
+              "broad-query",
+              "specific-query"
+            ]
+          },
+          "candidate_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "ranked_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
