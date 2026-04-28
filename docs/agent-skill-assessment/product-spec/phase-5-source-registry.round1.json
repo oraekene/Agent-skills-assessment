@@ -1,0 +1,41 @@
+{
+  "version": "phase-5-round1",
+  "sources": [
+    {
+      "source_id": "src-openai-skills",
+      "source_type": "github-repo",
+      "origin": "https://github.com/openai/skills",
+      "enabled": true,
+      "trust_tier": "curated-external",
+      "sync_policy": "weekly",
+      "discovery_policy": "explicit-only",
+      "provenance_tags": [
+        "source:openai-skills"
+      ]
+    },
+    {
+      "source_id": "src-anthropic-skills",
+      "source_type": "github-repo",
+      "origin": "https://github.com/anthropics/skills",
+      "enabled": true,
+      "trust_tier": "curated-external",
+      "sync_policy": "weekly",
+      "discovery_policy": "explicit-only",
+      "provenance_tags": [
+        "source:anthropic-skills"
+      ]
+    },
+    {
+      "source_id": "src-clawhub-example",
+      "source_type": "skills-directory-page",
+      "origin": "https://clawhub.ai",
+      "enabled": true,
+      "trust_tier": "community-external",
+      "sync_policy": "daily",
+      "discovery_policy": "follow-listed-children",
+      "provenance_tags": [
+        "source:clawhub"
+      ]
+    }
+  ]
+}

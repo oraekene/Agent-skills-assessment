@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ingestion Ledger",
+  "type": "object",
+  "required": [
+    "version",
+    "sync_jobs",
+    "snapshots",
+    "change_sets",
+    "reprocessing_plans"
+  ],
+  "properties": {
+    "version": { "type": "string" },
+    "sync_jobs": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "snapshots": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "change_sets": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "reprocessing_plans": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  },
+  "additionalProperties": false
+}

@@ -120,6 +120,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - summary of Phase 4 benchmark outputs
 
+`phase-5-self-maintaining-ingestion.md`
+
+- concrete source registry, sync, change-detection, and reprocessing rules
+
+`phase-5-results.md`
+
+- summary of Phase 5 ingestion outputs
+
 `roadmap.md`
 
 - phased delivery plan from current toolkit to future directory
@@ -192,6 +200,22 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - first machine-readable benchmark ledger
 
+`source-registry.schema.json`
+
+- schema for tracked source registry records
+
+`ingestion-ledger.schema.json`
+
+- schema for ingestion jobs, snapshots, and change sets
+
+`phase-5-source-registry.round1.json`
+
+- first machine-readable source registry example
+
+`phase-5-ingestion-ledger.round1.json`
+
+- first machine-readable ingestion ledger example
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -215,4 +239,6 @@ The product is designed `internal-first`, but with a data model and subsystem la
 19. `benchmarking-subsystem.md`
 20. `phase-4-benchmark-operations.md`
 21. `phase-4-results.md`
-22. `roadmap.md`
+22. `phase-5-self-maintaining-ingestion.md`
+23. `phase-5-results.md`
+24. `roadmap.md`
