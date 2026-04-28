@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public Directory Surface",
+  "type": "object",
+  "required": [
+    "version",
+    "domain_pages",
+    "task_search_results",
+    "skill_pages",
+    "source_pages"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "domain_pages": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "task_search_results": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "skill_pages": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "source_pages": {
+      "type": "array",
+      "items": { "type": "object" }
+    }
+  },
+  "additionalProperties": false
+}

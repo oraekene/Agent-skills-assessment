@@ -1,0 +1,83 @@
+{
+  "version": "phase-6-round1",
+  "domain_pages": [
+    {
+      "page_id": "public-domain-design-ux",
+      "domain": "design-and-ux",
+      "bands": [
+        {
+          "label": "strong",
+          "range": "80-94",
+          "skills": [
+            {
+              "display_name": "impeccable",
+              "score_band": "80-94",
+              "one_line_summary": "Strongest current public candidate for structured design audits and UI improvement work.",
+              "source_label": "pbakaus/impeccable",
+              "freshness_state": "recently-updated",
+              "evidence_badge": "good evidence"
+            }
+          ]
+        },
+        {
+          "label": "good",
+          "range": "70-79",
+          "skills": [
+            {
+              "display_name": "taste-redesign",
+              "score_band": "70-79",
+              "one_line_summary": "Strong redesign taste steering with less structure than the top public option.",
+              "source_label": "taste-skill",
+              "freshness_state": "fresh",
+              "evidence_badge": "moderate evidence"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "task_search_results": [
+    {
+      "search_id": "public-task-dashboard-audit",
+      "interpreted_query": "design-and-ux audit/improve for a SaaS dashboard UI",
+      "results": [
+        {
+          "display_name": "impeccable",
+          "score_band": "80-94",
+          "why_it_fits": "Best current public fit for structured dashboard audit and improvement work."
+        },
+        {
+          "display_name": "taste-redesign",
+          "score_band": "70-79",
+          "why_it_fits": "Good redesign-oriented secondary option."
+        }
+      ]
+    }
+  ],
+  "skill_pages": [
+    {
+      "skill_id": "unit-impeccable-main",
+      "display_name": "impeccable",
+      "score_band": "80-94",
+      "public_summary": "Design-focused skill for stronger UI review and improvement workflows.",
+      "domains": [
+        "design-and-ux"
+      ],
+      "source_label": "pbakaus/impeccable",
+      "freshness_state": "recently-updated",
+      "evidence_badge": "good evidence",
+      "better_alternatives": []
+    }
+  ],
+  "source_pages": [
+    {
+      "source_id": "src-clawhub-example",
+      "source_label": "clawhub",
+      "freshness_state": "recently-updated",
+      "score_band_distribution": {
+        "80-94": 1,
+        "70-79": 2
+      }
+    }
+  ]
+}

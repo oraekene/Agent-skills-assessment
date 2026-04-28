@@ -128,6 +128,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - summary of Phase 5 ingestion outputs
 
+`phase-6-public-directory.md`
+
+- concrete public browse, search, skill-page, and source-page rules
+
+`phase-6-results.md`
+
+- summary of Phase 6 public directory outputs
+
 `roadmap.md`
 
 - phased delivery plan from current toolkit to future directory
@@ -216,6 +224,14 @@ The product is designed `internal-first`, but with a data model and subsystem la
 
 - first machine-readable ingestion ledger example
 
+`public-directory.schema.json`
+
+- schema for public directory surfaces
+
+`phase-6-public-directory-example.round1.json`
+
+- first machine-readable public directory example
+
 ## Recommended Reading Order
 
 1. `architecture.md`
@@ -241,4 +257,6 @@ The product is designed `internal-first`, but with a data model and subsystem la
 21. `phase-4-results.md`
 22. `phase-5-self-maintaining-ingestion.md`
 23. `phase-5-results.md`
-24. `roadmap.md`
+24. `phase-6-public-directory.md`
+25. `phase-6-results.md`
+26. `roadmap.md`
